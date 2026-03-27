@@ -14,7 +14,7 @@ build/
 .eggs/
 
 # Contract source files (large, fetched at runtime)
-data/contracts/
+# data/contracts/
 
 # Jupyter
 .ipynb_checkpoints/
