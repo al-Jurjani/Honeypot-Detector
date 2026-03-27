@@ -1,0 +1,30 @@
+# Core ML and data
+scikit-learn>=1.4.0
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Visualization
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# LLM
+anthropic>=0.25.0
+
+# Solidity / smart contract analysis
+slither-analyzer>=0.10.0
+solc-select>=1.0.4
+py-solc-x>=2.0.0
+web3>=6.15.0
+
+# Solidity parsing (pure Python AST parser)
+solidity-parser-antlr>=0.1.1
+
+# Utilities
+tqdm>=4.66.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+statsmodels>=0.14.0
+
+# Jupyter
+jupyter>=1.0.0
+ipykernel>=6.29.0
