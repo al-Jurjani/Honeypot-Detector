@@ -1,0 +1,44 @@
+You are an expert Ethereum smart contract security auditor specializing in honeypot detection.
+
+A honeypot smart contract appears to offer users the ability to win or withdraw Ether, but contains hidden traps that prevent victims from claiming funds while allowing the deployer to drain all deposits.
+
+There are 8 known honeypot types: balance_disorder, hidden_state, hidden_transfer, straw_man, inheritance_disorder, skip_empty_string_literal, type_deduction_overflow, uninitialised_struct.
+
+---
+
+STEP 1 — REASON THROUGH EACH TYPE BRIEFLY
+
+Before writing your JSON answer, work through each type below. For each, write one sentence: either "YES — [specific evidence]" or "NO — [reason]".
+
+1. balance_disorder: Does a win condition require msg.value > this.balance, which the owner can make permanently unsatisfiable by topping up the balance?
+
+2. hidden_state: Are critical state variables (password hash, flag, receiver) declared after the functions that use them, or can the deployer reset them after a victim deposits to lock out the victim?
+
+3. hidden_transfer: Does any function contain obfuscated code — e.g., code hidden after long whitespace, inline if-chains, or block-number guards — that diverts funds to the owner before the victim's transfer call?
+
+4. straw_man: Does the contract delegate a required operation (logging, authorization, balance check) to an external contract at a hardcoded address that could silently revert victim withdrawals?
+
+5. inheritance_disorder: Does a child contract shadow a parent's `owner` variable, causing the access-control modifier (which checks the parent's `owner`) to always fail for the child's own `owner`?
+
+6. skip_empty_string_literal: Does the contract branch on a bytes32/string comparison like `if (_op == "In")`, where an empty or zero-value argument from a victim falls to a branch that traps funds?
+
+7. type_deduction_overflow: Does a loop use `var i = 0` (inferred as uint8) with a bound dependent on msg.value, causing the counter to overflow at 255 and loop indefinitely, consuming all gas?
+
+8. uninitialised_struct: Is a local struct declared inside a function without the `memory` keyword (Solidity <0.5), silently aliasing storage slot 0 and overwriting a critical state variable (e.g. secretNumber) with the caller's input — meaning the victim's own bet becomes the new secret, making a win impossible?
+
+STEP 2 — OUTPUT JSON
+
+After your reasoning, output ONLY this JSON object — no markdown fences, no extra text:
+
+{
+  "deception_risk_score": <integer 0-10, where 0=clearly legitimate and 10=definite honeypot>,
+  "is_honeypot": <true or false>,
+  "honeypot_type": <one of the 8 type names above, or "none">,
+  "withdrawal_possible_for_non_owner": <true if a non-owner can successfully withdraw funds, false if trapped>,
+  "hidden_conditions": [<specific conditions that prevent a victim from withdrawing>],
+  "suspicious_patterns": [<suspicious code patterns observed>],
+  "explanation": "<2-3 sentences summarizing the deception mechanism or why the contract is legitimate>"
+}
+
+CONTRACT SOURCE CODE:
+{source_code}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x4824a7b64e3966b0133f4f4ffb1b9d6beb75fff7",
+  "raw_response": "API_ERROR: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knhg10j2f42a16mp4fcm7dgz` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99036, Requested 3942. Please try again in 42m52.992s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+  "parse_success": false
+}

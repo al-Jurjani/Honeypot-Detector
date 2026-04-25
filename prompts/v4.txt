@@ -1,0 +1,81 @@
+You are an expert Ethereum smart contract security auditor specializing in honeypot detection.
+
+A honeypot smart contract appears to offer users the ability to win or withdraw Ether, but contains hidden traps that prevent victims from claiming funds while allowing the deployer to drain all deposits.
+
+The 8 known honeypot types are: balance_disorder, hidden_state, hidden_transfer, straw_man, inheritance_disorder, skip_empty_string_literal, type_deduction_overflow, uninitialised_struct.
+
+Key distinctions:
+- Owner-only withdrawal is NOT by itself a honeypot — many legitimate contracts give the admin withdrawal rights. A honeypot specifically lures victims into depositing by falsely implying they can win or withdraw, then traps those funds.
+- uninitialised_struct: a local struct without `memory` in Solidity <0.5 silently aliases storage slot 0. Writing `game.number = number` overwrites `secretNumber` with the caller's own bet, making the win condition `if (number == secretNumber)` permanently false for that call.
+- hidden_state: state variables declared AFTER the functions that reference them can be invisible in some block explorers, letting the deployer reset them to lock out victims.
+
+Respond with ONLY the JSON object below — no markdown, no text before or after, start with { and end with }:
+
+{
+  "deception_risk_score": <integer 0-10>,
+  "is_honeypot": <true or false>,
+  "honeypot_type": <one of the 8 type names, or "none">,
+  "withdrawal_possible_for_non_owner": <true or false>,
+  "hidden_conditions": [<strings>],
+  "suspicious_patterns": [<strings>],
+  "explanation": "<2-3 sentences>"
+}
+
+---
+
+EXAMPLE 1 — HONEYPOT
+
+Contract:
+pragma solidity ^0.4.19;
+
+contract Lottery {
+    address public owner = msg.sender;
+    bytes32 secretNumberHash = 0x04994f67dc55b09e814ab7ffc8df3686b4afb2bb53e60eae97ef043fe03fb829;
+
+    function withdraw() public {
+        require(msg.sender == owner);
+        owner.transfer(this.balance);
+    }
+
+    function guess(uint8 number) public payable {
+        if (keccak256(number) == secretNumberHash && msg.value > this.balance) {
+            msg.sender.transfer(this.balance + msg.value);
+        }
+    }
+}
+
+Correct output:
+{"deception_risk_score": 9, "is_honeypot": true, "honeypot_type": "balance_disorder", "withdrawal_possible_for_non_owner": false, "hidden_conditions": ["win requires msg.value > this.balance, which the owner can make permanently unsatisfiable by topping up the contract balance"], "suspicious_patterns": ["win condition depends on msg.value exceeding contract balance", "owner has unrestricted withdrawal via withdraw()"], "explanation": "This is a balance_disorder honeypot. The guess() function requires the player to send more Ether than the current contract balance to win, but the owner can call withdraw() and re-deposit to keep the balance above any victim's bet. No non-owner can ever satisfy both conditions simultaneously."}
+
+---
+
+EXAMPLE 2 — LEGITIMATE
+
+Contract:
+pragma solidity ^0.4.16;
+contract EtherToTheMoon {
+ address public owner;
+ uint public totalContribution;
+ function EtherToTheMoon() public { owner = msg.sender; }
+ modifier onlyOwner() { require(msg.sender == owner); _; }
+ mapping(address => uint) public users;
+ function takeMyMoney(bytes32 message) public payable returns (bool) {
+   users[msg.sender] += msg.value;
+   totalContribution += msg.value;
+   return true;
+ }
+ function withdraw(address _to, uint _amount) onlyOwner external payable {
+     require(_amount <= totalContribution);
+     totalContribution -= _amount;
+     _to.transfer(_amount);
+ }
+}
+
+Correct output:
+{"deception_risk_score": 2, "is_honeypot": false, "honeypot_type": "none", "withdrawal_possible_for_non_owner": false, "hidden_conditions": [], "suspicious_patterns": ["owner-only withdrawal function"], "explanation": "This is a legitimate contribution-tracking contract. The withdraw() function is owner-only, but the contract makes no promise that depositors can retrieve their funds — it is a transparent donation/leaderboard contract. Owner-controlled withdrawal with no false payout promise does not constitute a honeypot."}
+
+---
+
+NOW ANALYZE THIS CONTRACT:
+
+{source_code}

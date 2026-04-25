@@ -1,0 +1,21 @@
+contract_id,filename,true_label,true_honeypot_type,is_honeypot,honeypot_type_predicted,deception_risk_score,withdrawal_possible_for_non_owner,parse_success,explanation
+0x8d4eb49f0ed7ee6d6e00fc76ea3e9c3898bf219d,hp_093.sol,honeypot,hidden_state,True,hidden_state,8.0,False,True,"The contract hides critical state variables after the functions that reference them, making them invisible to casual readers."
+0x930dfbdc5e9f1984a8d87de29d6a79fbb2bb7b32,hp_094.sol,honeypot,hidden_state,True,hidden_state,8.0,False,True,"Hidden state variables are reset by the deployer after victims deposit, trapping their funds."
+0x4dc76cfc65b14b3fd83c8bc8b895482f3cbc150a,hp_180.sol,honeypot,inheritance_disorder,True,inheritance_disorder,8.0,False,True,"Child contract shadows the parent owner variable, causing the onlyOwner modifier to check a different variable than the one assignments update."
+0xc1574ab95106621686d6e480f378d79c0442fe33,hp_125.sol,honeypot,hidden_state,True,hidden_state,8.0,False,True,"State variables declared after function bodies are invisible in some block explorers, letting the deployer silently lock out victims."
+0x4fdc2078d8bc92e1ee594759d7362f94b60b1a3d,hp_262.sol,honeypot,uninitialised_struct,True,uninitialised_struct,8.0,False,True,"Local struct declared without memory keyword aliases storage slot 0, overwriting secretNumber with the caller's own input."
+0xb4c05e6e4cdb07c15095300d96a5735046eef999,hp_234.sol,honeypot,straw_man,True,straw_man,8.0,False,True,External contract at a hardcoded address silently reverts victim withdrawal calls.
+0x704079e823e42a936bbaac5163434c2515473836,hp_078.sol,honeypot,hidden_state,True,hidden_state,8.0,False,True,Deployer can reset hidden state variable after victim deposits to permanently block withdrawal.
+0x69bfbf000bd39444af2efba733829b04211252bc,hp_010.sol,honeypot,balance_disorder,True,balance_disorder,8.0,False,True,"Win condition requires msg.value > this.balance; the owner can top up the balance at any time, making the condition permanently unsatisfiable."
+0x04baddfb21723ec467e9993b715c5e0d673bac96,hp_252.sol,honeypot,uninitialised_struct,False,none,2.0,True,True,"The contract appears to be a legitimate game of chance, where players can guess a secret number and win the contract balance. The code is straightforward, and there are no obvious hidden traps. The kill function has a time delay but is not a deception mechanism."
+0x6324d9d0a23f5ddba165bf8cc61da455350895f2,hp_265.sol,honeypot,uninitialised_struct,True,uninitialised_struct,8.0,False,True,"Uninitialised local struct silently aliases storage slot 0, overwriting the secretNumber with the caller's bet, making a win impossible."
+0xb919b2903e07293bc84372471a7081ecb69e8d36,legit_025.sol,legitimate,,,,,,False,
+0x2d05359a51ca13c4ac5f4437585afaf5bf2050f9,legit_007.sol,legitimate,,,,,,False,
+0x44b2af77a8036837eea739c169aa0f8972ed28b8,legit_223.sol,legitimate,,True,hidden_state,8.0,False,True,"The contract has a high deception risk score due to hidden state variables and complex conditions restricting transfers. The _p76234 variable is set only in a restricted function, suggesting it may trap non-owner funds."
+0x419d0d8bdd9af5e606ae2232ed285aff190e711b,legit_209.sol,legitimate,,False,none,2.0,True,True,Legitimate token contract with standard ERC20 mechanics and no deceptive patterns.
+0x4824a7b64e3966b0133f4f4ffb1b9d6beb75fff7,legit_237.sol,legitimate,,False,none,2.0,True,True,Standard token contract with transparent fund flow and no suspicious patterns.
+0x32b4d049fe4c888d2b92eecaf729f44df6b1f36e,legit_174.sol,legitimate,,,,,,False,
+0x3cb373b4ec92a60d3233e4ea542ca12bcb1bd7ed,legit_198.sol,legitimate,,False,none,2.0,True,True,Legitimate contract with transparent fund flow and no deceptive mechanisms detected.
+0x4462914b78e2621fb1d18c3be52f6b5e677c0e2d,legit_221.sol,legitimate,,True,hidden_state,8.0,False,True,The contract appears to be a honeypot due to hidden state variables and functions only accessible by the owner. The onlyOwner modifier and state variables declared after function bodies raised suspicion.
+0x60bf91ac87fee5a78c28f7b67701fbcfa79c18ec,legit_010.sol,legitimate,,False,none,2.0,True,True,Standard Solidity contract with no honeypot patterns.
+0x1bbe973bef3a977fc51cbed703e8ffdefe001fed,legit_114.sol,legitimate,,,,,,False,

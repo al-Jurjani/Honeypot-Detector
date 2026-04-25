@@ -1,0 +1,498 @@
+[
+  {
+    "version": "v1",
+    "metrics": {
+      "accuracy": 0.9,
+      "precision": 0.8333333333333334,
+      "recall": 1.0,
+      "f1": 0.9090909090909091,
+      "parse_rate": 1.0,
+      "n_parsed": 10,
+      "n_total": 10
+    },
+    "results": [
+      {
+        "contract_id": "0x8d4eb49f0ed7ee6d6e00fc76ea3e9c3898bf219d",
+        "true_label": "honeypot",
+        "true_honeypot_type": "hidden_state",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract has a hidden state variable 'closed' that can be set to true by the sender, preventing further deposits and withdrawals. Additionally, the sender can manipulate the unlock time, trapping funds and preventing victims from withdrawing. This indicates a honeypot deception type of 'hidden_state'."
+      },
+      {
+        "contract_id": "0x930dfbdc5e9f1984a8d87de29d6a79fbb2bb7b32",
+        "true_label": "honeypot",
+        "true_honeypot_type": "hidden_state",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a honeypot due to the presence of hidden state variables and functions that allow the sender to control the contract's behavior, making it difficult for non-owners to withdraw funds. The 'closed' variable and 'SetGiftTime' function can be used to trap victim funds."
+      },
+      {
+        "contract_id": "0x4dc76cfc65b14b3fd83c8bc8b895482f3cbc150a",
+        "true_label": "honeypot",
+        "true_honeypot_type": "inheritance_disorder",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "balance_disorder",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a honeypot due to the 'balance_disorder' deception type, where the owner can prevent others from becoming the owner by inflating the contract balance. Additionally, the contract has a potential issue with state variable shadowing due to the re-declaration of the 'owner' variable in the child contract."
+      },
+      {
+        "contract_id": "0xc1574ab95106621686d6e480f378d79c0442fe33",
+        "true_label": "honeypot",
+        "true_honeypot_type": "hidden_state",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract allows the questionSender to update the responseHash and question at any time, effectively giving them control over the game state and making it impossible for others to win. The questionSender can also stop the game and withdraw all funds, trapping any Ether sent by other players."
+      },
+      {
+        "contract_id": "0x4fdc2078d8bc92e1ee594759d7362f94b60b1a3d",
+        "true_label": "honeypot",
+        "true_honeypot_type": "uninitialised_struct",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a honeypot due to the presence of hidden state variables and functions that allow the owner to manipulate the contract's behavior. The owner can reseed the contract at will, changing the secret seed and making it impossible for a non-owner to win. Additionally, the contract's balance can be drained by the owner using the kill function."
+      },
+      {
+        "contract_id": "0xb919b2903e07293bc84372471a7081ecb69e8d36",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a legitimate implementation of the Oraclize API, with no obvious signs of honeypot deception. The presence of hardcoded external addresses is a common pattern in Oraclize contracts and does not necessarily indicate malicious intent."
+      },
+      {
+        "contract_id": "0x2d05359a51ca13c4ac5f4437585afaf5bf2050f9",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a legitimate implementation of the Oraclize API, with no obvious honeypot deception mechanisms. The presence of hardcoded external addresses is a common pattern in Oraclize contracts and does not necessarily indicate malicious intent."
+      },
+      {
+        "contract_id": "0x44b2af77a8036837eea739c169aa0f8972ed28b8",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": false,
+        "explanation": "The contract has a high deception risk score due to the presence of hidden state variables and complex conditions that restrict transfers, making it difficult for non-owners to withdraw funds. The contract's use of hardcoded addresses and hidden state variables suggests that it may be a honeypot contract designed to trap victim funds."
+      },
+      {
+        "contract_id": "0x419d0d8bdd9af5e606ae2232ed285aff190e711b",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a legitimate token contract with a complex architecture, including a controller and ledger. While there are some suspicious patterns, such as hardcoded external addresses and state variables declared after functions, they do not seem to be part of a honeypot deception mechanism. The contract's logic and functionality are well-structured and follow standard token contract patterns."
+      },
+      {
+        "contract_id": "0x4824a7b64e3966b0133f4f4ffb1b9d6beb75fff7",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract is a standard ERC20 token implementation with pausable transfers, and does not contain any obvious honeypot deception mechanisms. The fallback function reverts any incoming Ether, but this is a common pattern to prevent accidental Ether transfers."
+      }
+    ]
+  },
+  {
+    "version": "v2",
+    "metrics": {
+      "accuracy": 0.8,
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "parse_rate": 1.0,
+      "n_parsed": 10,
+      "n_total": 10
+    },
+    "results": [
+      {
+        "contract_id": "0x8d4eb49f0ed7ee6d6e00fc76ea3e9c3898bf219d",
+        "true_label": "honeypot",
+        "true_honeypot_type": "hidden_state",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract has a hidden state variable 'closed' that can be set to true by the sender, locking out victims and preventing them from withdrawing funds. Additionally, the sender can control the unlock time, making it difficult for the recipient to withdraw the funds. This contract exhibits characteristics of a honeypot, specifically the 'hidden_state' type."
+      },
+      {
+        "contract_id": "0x930dfbdc5e9f1984a8d87de29d6a79fbb2bb7b32",
+        "true_label": "honeypot",
+        "true_honeypot_type": "hidden_state",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a honeypot due to the presence of hidden state variables and functions that allow the sender to control the contract's behavior, potentially trapping victim funds. The 'closed' variable and 'SetGiftTime' function can be used to prevent non-owners from withdrawing funds."
+      },
+      {
+        "contract_id": "0x4dc76cfc65b14b3fd83c8bc8b895482f3cbc150a",
+        "true_label": "honeypot",
+        "true_honeypot_type": "inheritance_disorder",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "balance_disorder",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a honeypot due to the 'balance_disorder' deception type, where the owner can prevent others from becoming the owner by inflating the contract balance. Additionally, the state variable 'owner' is declared in both the parent and child contracts, which could lead to shadowing issues. This makes it unlikely for non-owners to successfully withdraw funds."
+      },
+      {
+        "contract_id": "0xc1574ab95106621686d6e480f378d79c0442fe33",
+        "true_label": "honeypot",
+        "true_honeypot_type": "hidden_state",
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 6,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": false,
+        "explanation": "The contract appears to be a simple game where users can play by sending a response to a question, and if the response matches the hashed response, they can withdraw the contract's balance. The contract does not exhibit any obvious honeypot characteristics, but it does have some suspicious patterns, such as the use of an older Solidity version and hardcoded conditions for withdrawal."
+      },
+      {
+        "contract_id": "0x4fdc2078d8bc92e1ee594759d7362f94b60b1a3d",
+        "true_label": "honeypot",
+        "true_honeypot_type": "uninitialised_struct",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a legitimate lottery, but the owner has the ability to reseed the contract at will, changing the secret seed and making it impossible for a victim to win. Additionally, the contract's balance can be drained by the owner using the kill function, indicating that this is a honeypot contract with a hidden state deception mechanism."
+      },
+      {
+        "contract_id": "0xb919b2903e07293bc84372471a7081ecb69e8d36",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a legitimate implementation of the Oraclize API, with no obvious honeypot deception mechanisms. The presence of hardcoded external addresses is noted, but this is a common pattern in Oraclize contracts and does not necessarily indicate malicious intent."
+      },
+      {
+        "contract_id": "0x2d05359a51ca13c4ac5f4437585afaf5bf2050f9",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a legitimate implementation of the Oraclize API, with no obvious signs of honeypot deception. The presence of hardcoded external addresses is a common pattern in Oraclize contracts and does not necessarily indicate malicious intent."
+      },
+      {
+        "contract_id": "0x44b2af77a8036837eea739c169aa0f8972ed28b8",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": false,
+        "explanation": "The contract has several suspicious patterns and hidden conditions that make it difficult for non-owners to withdraw funds. The use of hardcoded external addresses and private variables without clear documentation or explanation raises concerns about the contract's legitimacy. The complex condition in the _transfer function and the ability for the owner to set the _p76234 variable through the actionPair function suggest that the contract may be designed to trap funds."
+      },
+      {
+        "contract_id": "0x419d0d8bdd9af5e606ae2232ed285aff190e711b",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a legitimate token contract with a complex architecture, including a controller and ledger. While there are some suspicious patterns, such as hardcoded external addresses and state variables declared after functions, they do not seem to be part of a honeypot deception mechanism. The contract's logic and functionality are well-structured and follow standard token contract patterns."
+      },
+      {
+        "contract_id": "0x4824a7b64e3966b0133f4f4ffb1b9d6beb75fff7",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract is a standard ERC20 token implementation with pausable transfers, and does not contain any obvious honeypot deception mechanisms. The fallback function reverts any incoming Ether, but this is a common pattern to prevent accidental Ether transfers."
+      }
+    ]
+  },
+  {
+    "version": "v3",
+    "metrics": {
+      "accuracy": 0.4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "parse_rate": 1.0,
+      "n_parsed": 10,
+      "n_total": 10
+    },
+    "results": [
+      {
+        "contract_id": "0x8d4eb49f0ed7ee6d6e00fc76ea3e9c3898bf219d",
+        "true_label": "honeypot",
+        "true_honeypot_type": "hidden_state",
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": false,
+        "explanation": "The contract appears to be a simple gift contract that allows the sender to set a recipient and an unlock time, after which the recipient can withdraw the funds. The contract does not contain any obvious honeypot patterns, but it does use a deprecated version of Solidity and has an empty fallback function, which could be considered suspicious."
+      },
+      {
+        "contract_id": "0x930dfbdc5e9f1984a8d87de29d6a79fbb2bb7b32",
+        "true_label": "honeypot",
+        "true_honeypot_type": "hidden_state",
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": false,
+        "explanation": "The contract appears to be a simple gift-giving contract, allowing the sender to set a recipient and unlock time, and the recipient to claim the gift after the unlock time. The contract does not contain any obvious honeypot patterns, but it does use a deprecated solidity version and an empty fallback function, which could be considered suspicious."
+      },
+      {
+        "contract_id": "0x4dc76cfc65b14b3fd83c8bc8b895482f3cbc150a",
+        "true_label": "honeypot",
+        "true_honeypot_type": "inheritance_disorder",
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": false,
+        "explanation": "The contract appears to be a simple game where players can become the owner by sending more Ether than the current jackpot. The owner can then withdraw the jackpot after a 5-day delay. There are no apparent honeypot mechanisms or suspicious patterns in the contract."
+      },
+      {
+        "contract_id": "0xc1574ab95106621686d6e480f378d79c0442fe33",
+        "true_label": "honeypot",
+        "true_honeypot_type": "hidden_state",
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": false,
+        "explanation": "The contract appears to be a simple game where users can play and withdraw their winnings if they answer the question correctly. The contract does not have any obvious honeypot mechanisms, and the withdrawal function seems to be accessible to non-owners."
+      },
+      {
+        "contract_id": "0x4fdc2078d8bc92e1ee594759d7362f94b60b1a3d",
+        "true_label": "honeypot",
+        "true_honeypot_type": "uninitialised_struct",
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": false,
+        "explanation": "The contract appears to be a legitimate lottery game, where participants can win a jackpot based on a random number generated from their address. The contract's logic is straightforward, and there are no obvious hidden traps or conditions that would prevent a non-owner from withdrawing funds."
+      },
+      {
+        "contract_id": "0xb919b2903e07293bc84372471a7081ecb69e8d36",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 0,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a legitimate implementation of the Oraclize API, with no obvious honeypot traps or hidden conditions that would prevent a non-owner from withdrawing funds."
+      },
+      {
+        "contract_id": "0x2d05359a51ca13c4ac5f4437585afaf5bf2050f9",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 0,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a legitimate implementation of the Oraclize API, with no obvious honeypot traps or deceptive mechanisms. The contract's functionality is focused on querying external data sources and does not contain any suspicious patterns or hidden conditions that would prevent a non-owner from withdrawing funds."
+      },
+      {
+        "contract_id": "0x44b2af77a8036837eea739c169aa0f8972ed28b8",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_transfer",
+        "parse_success": true,
+        "correct": false,
+        "explanation": "The contract contains hidden transfer mechanisms that divert funds to the owner, making it a honeypot. The _transfer function contains obfuscated code that checks for specific addresses and amounts, allowing the owner to drain deposits."
+      },
+      {
+        "contract_id": "0x419d0d8bdd9af5e606ae2232ed285aff190e711b",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 2,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract appears to be a legitimate token contract with standard functionality, including transfer, approval, and minting. There are no obvious honeypot patterns or hidden conditions that would prevent a non-owner from withdrawing funds."
+      },
+      {
+        "contract_id": "0x4824a7b64e3966b0133f4f4ffb1b9d6beb75fff7",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 0,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "The contract is a standard ERC20 token implementation with pausable transfers, and does not contain any honeypot-like behavior or suspicious patterns."
+      }
+    ]
+  },
+  {
+    "version": "v4",
+    "metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "parse_rate": 0.5,
+      "n_parsed": 5,
+      "n_total": 10
+    },
+    "results": [
+      {
+        "contract_id": "0x8d4eb49f0ed7ee6d6e00fc76ea3e9c3898bf219d",
+        "true_label": "honeypot",
+        "true_honeypot_type": "hidden_state",
+        "is_honeypot_predicted": null,
+        "deception_risk_score": null,
+        "honeypot_type_predicted": null,
+        "parse_success": false,
+        "correct": null,
+        "explanation": null
+      },
+      {
+        "contract_id": "0x930dfbdc5e9f1984a8d87de29d6a79fbb2bb7b32",
+        "true_label": "honeypot",
+        "true_honeypot_type": "hidden_state",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 6,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "This contract has characteristics of a hidden_state honeypot. The sender has significant control over the contract state, including the ability to set the reciver and unlockTime, which can be used to prevent non-owners from retrieving the gift. The contract's use of a time-based condition in GetGift() can also be manipulated by the sender to lock out victims."
+      },
+      {
+        "contract_id": "0x4dc76cfc65b14b3fd83c8bc8b895482f3cbc150a",
+        "true_label": "honeypot",
+        "true_honeypot_type": "inheritance_disorder",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "This is a hidden_state honeypot. The contract appears to allow players to become the owner and withdraw the jackpot after a delay, but the previous owner can re-take ownership by sending more Ether before the delay expires, effectively preventing the new owner from withdrawing the funds."
+      },
+      {
+        "contract_id": "0xc1574ab95106621686d6e480f378d79c0442fe33",
+        "true_label": "honeypot",
+        "true_honeypot_type": "hidden_state",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "This is a hidden_state honeypot. The contract's state variables, such as responseHash and questionSender, are controlled by the questionSender, allowing them to manipulate the game and drain funds, while non-questionSender players are lured into depositing Ether with no chance of winning."
+      },
+      {
+        "contract_id": "0x4fdc2078d8bc92e1ee594759d7362f94b60b1a3d",
+        "true_label": "honeypot",
+        "true_honeypot_type": "uninitialised_struct",
+        "is_honeypot_predicted": true,
+        "deception_risk_score": 8,
+        "honeypot_type_predicted": "hidden_state",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "This contract appears to be a hidden_state honeypot. The secretSeed variable is not visible and can be manipulated by the owner through the forceReseed() function, allowing them to prevent wins. The contract's promise of a 50% chance of winning is likely an illusion, and the owner can use the forceReseed() function to ensure that no one wins."
+      },
+      {
+        "contract_id": "0xb919b2903e07293bc84372471a7081ecb69e8d36",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": false,
+        "deception_risk_score": 0,
+        "honeypot_type_predicted": "none",
+        "parse_success": true,
+        "correct": true,
+        "explanation": "This contract appears to be a legitimate Oraclize API implementation, providing a set of functions for interacting with the Oraclize service. There are no apparent honeypot patterns or hidden conditions that would suggest malicious intent."
+      },
+      {
+        "contract_id": "0x2d05359a51ca13c4ac5f4437585afaf5bf2050f9",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": null,
+        "deception_risk_score": null,
+        "honeypot_type_predicted": null,
+        "parse_success": false,
+        "correct": null,
+        "explanation": null
+      },
+      {
+        "contract_id": "0x44b2af77a8036837eea739c169aa0f8972ed28b8",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": null,
+        "deception_risk_score": null,
+        "honeypot_type_predicted": null,
+        "parse_success": false,
+        "correct": null,
+        "explanation": null
+      },
+      {
+        "contract_id": "0x419d0d8bdd9af5e606ae2232ed285aff190e711b",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": null,
+        "deception_risk_score": null,
+        "honeypot_type_predicted": null,
+        "parse_success": false,
+        "correct": null,
+        "explanation": null
+      },
+      {
+        "contract_id": "0x4824a7b64e3966b0133f4f4ffb1b9d6beb75fff7",
+        "true_label": "legitimate",
+        "true_honeypot_type": NaN,
+        "is_honeypot_predicted": null,
+        "deception_risk_score": null,
+        "honeypot_type_predicted": null,
+        "parse_success": false,
+        "correct": null,
+        "explanation": null
+      }
+    ]
+  }
+]
