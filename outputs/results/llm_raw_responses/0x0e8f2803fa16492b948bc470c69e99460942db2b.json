@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x0e8f2803fa16492b948bc470c69e99460942db2b",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"require(msg.sender == tx.origin)\", \"require(msg.value>0.01 ether)\"],\n  \"suspicious_patterns\": [\"hardcoded value in require statement\", \"use of tx.origin\"],\n  \"explanation\": \"The contract appears to be a simple quiz game where players can play and potentially win Ether. While there are some suspicious patterns, such as the use of tx.origin and hardcoded values, the contract does not exhibit any of the classic honeypot deception types. The contract's logic is relatively straightforward, and non-owners can potentially withdraw funds if they provide the correct response.\"\n}",
+  "parse_success": true
+}

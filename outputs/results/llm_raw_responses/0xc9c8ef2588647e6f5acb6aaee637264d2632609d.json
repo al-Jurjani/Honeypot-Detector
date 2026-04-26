@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xc9c8ef2588647e6f5acb6aaee637264d2632609d",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"the contract balance can be silently inflated by the owner, making the condition msg.value >= this.balance impossible to satisfy\"],\n  \"suspicious_patterns\": [\"state variable Owner declared before functions, but can be used to restrict access\", \"require statement in Withdraw function restricts access to owner only\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the balance disorder deception type, where the owner can silently inflate the contract balance, making it impossible for non-owners to satisfy the condition msg.value >= this.balance and withdraw funds. The contract's design restricts access to the owner, and the Guess function's conditions are practically unachievable once the owner tops up the balance. This suggests that the contract is designed to trap victim funds.\"\n}",
+  "parse_success": true
+}

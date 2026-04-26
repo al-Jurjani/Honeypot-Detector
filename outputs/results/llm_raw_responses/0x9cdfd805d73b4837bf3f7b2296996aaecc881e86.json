@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x9cdfd805d73b4837bf3f7b2296996aaecc881e86",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"the contract balance must be exceeded by the sender's value\", \"the sender must know the correct pin code\"],\n  \"suspicious_patterns\": [\"payable function with no clear purpose\", \"requirement to send money to prevent random guesses\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the balance disorder deception type, where the sender must send a value greater than or equal to the contract's balance to withdraw funds. This condition is practically unachievable once the owner tops up the balance, making it a likely honeypot.\"\n}",
+  "parse_success": true
+}

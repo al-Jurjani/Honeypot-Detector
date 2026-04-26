@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x5bb52e85c21ca3df3c71da6d03be19cff89e7cf9",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"the credit function requires msg.value to exceed the contract's current balance, which can be inflated by the owner\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"hardcoded conditions in the credit function\"],\n  \"explanation\": \"The contract has a high deception risk due to the balance disorder honeypot type, where the credit function requires the sender's value to exceed the contract's current balance, which can be silently inflated by the owner. The contract's design allows the owner to drain all deposited Ether, while preventing victims from successfully claiming funds.\"\n}",
+  "parse_success": true
+}

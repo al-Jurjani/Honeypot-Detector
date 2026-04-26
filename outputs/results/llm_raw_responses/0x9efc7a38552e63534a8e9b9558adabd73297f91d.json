@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x9efc7a38552e63534a8e9b9558adabd73297f91d",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"requirement for msg.value to exceed this.balance in Guess function\", \"owner can silently inflate contract balance\"],\n  \"suspicious_patterns\": [\"hardcoded condition in Guess function\", \"owner-only withdrawal\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the balance disorder deception type, where the requirement for msg.value to exceed this.balance in the Guess function makes it practically unachievable for victims to satisfy the winning condition, especially since the owner can silently inflate the contract balance. The contract's design allows the owner to drain all deposited Ether while preventing victims from successfully claiming funds. The Guess function's condition is also suspicious, as it requires a specific calculation to match the SecretNumber, making it difficult for victims to win.\"\n}",
+  "parse_success": true
+}

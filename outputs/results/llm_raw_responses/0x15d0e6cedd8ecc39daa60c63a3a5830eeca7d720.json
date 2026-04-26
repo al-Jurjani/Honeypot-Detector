@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x15d0e6cedd8ecc39daa60c63a3a5830eeca7d720",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"the condition msg.value > this.balance is practically unachievable once the owner tops up the balance\"],\n  \"suspicious_patterns\": [\"hardcoded secret number hash\", \"state variable declared before functions\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the balance disorder deception type, where the condition msg.value > this.balance is practically unachievable once the owner tops up the balance, preventing non-owners from withdrawing funds. The owner can silently inflate the contract balance, making the condition impossible for victims to satisfy. The contract's design allows the owner to drain all deposited Ether.\"\n}",
+  "parse_success": true
+}

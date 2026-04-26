@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xfd1e3d3e641f224ce8e1117866cf3f01ed2d5d9f",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"the condition msg.value > this.balance is practically unachievable once the owner tops up the balance\"],\n  \"suspicious_patterns\": [\"the owner can silently inflate the contract balance\", \"the guess function has a condition that is difficult to satisfy\"],\n  \"explanation\": \"The contract is a honeypot because the condition msg.value > this.balance in the guess function is practically unachievable once the owner tops up the balance, preventing non-owners from withdrawing funds. The owner can silently inflate the contract balance, making it impossible for victims to satisfy the winning condition. The contract's design allows the owner to drain all deposited Ether.\"\n}",
+  "parse_success": true
+}

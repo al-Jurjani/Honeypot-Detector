@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x13c547ff0888a0a876e6f1304eaefe9e6e06fc4b",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract requires the sender to know the hashPass to withdraw funds\", \"The sender must also be the one who set the hashPass\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"use of payable functions without clear purpose\"],\n  \"explanation\": \"The contract appears to be a honeypot due to its use of hidden state variables and complex logic that makes it difficult for non-owners to withdraw funds. The contract's design allows the owner to set a password hash and then use it to control access to the contract's funds, making it a potential trap for unsuspecting users.\"\n}",
+  "parse_success": true
+}

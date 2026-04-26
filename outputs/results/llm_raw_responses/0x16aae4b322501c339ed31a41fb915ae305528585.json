@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x16aae4b322501c339ed31a41fb915ae305528585",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"responseHash can be updated by the questionSender, preventing others from guessing correctly\", \"questionSender can drain funds using StopQuiz or NewQuiz\"],\n  \"suspicious_patterns\": [\"state variable questionSender can be used to control access to funds\", \"function NewQuiz allows questionSender to update responseHash\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variable questionSender, which allows the deployer to control access to funds and update the responseHash, making it impossible for others to guess correctly and withdraw funds. The contract's design enables the deployer to drain funds at will, while victims are left with no chance of winning.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x9f54d912a029380f2743aaf4ddd28c3f207cd719",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"owner can silently inflate the contract balance by sending Ether, making the condition msg.value >= this.balance impossible to satisfy\"],\n  \"suspicious_patterns\": [\"payable fallback function\", \"owner can drain contract funds using kill function\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the balance disorder deception type, where the owner can silently inflate the contract balance, making it impossible for victims to satisfy the condition msg.value >= this.balance and claim the funds. The payable fallback function and the kill function that allows the owner to drain contract funds also raise suspicions. The contract's design makes it unlikely for non-owners to successfully withdraw funds.\"\n}",
+  "parse_success": true
+}

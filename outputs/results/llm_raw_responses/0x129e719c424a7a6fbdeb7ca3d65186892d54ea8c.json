@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x129e719c424a7a6fbdeb7ca3d65186892d54ea8c",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"the contract balance can be silently inflated by the owner, making the condition msg.value > this.balance practically unachievable\"],\n  \"suspicious_patterns\": [\"the contract has a payable fallback function\", \"the owner can update the responseHash and Question variables at will\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the balance disorder deception type, where the owner can silently inflate the contract balance, making it impossible for victims to satisfy the condition msg.value > this.balance and withdraw funds. The contract's design allows the owner to control the game state and drain the contract balance at will.\"\n}",
+  "parse_success": true
+}

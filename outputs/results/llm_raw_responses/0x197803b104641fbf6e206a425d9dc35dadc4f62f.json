@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x197803b104641fbf6e206a425d9dc35dadc4f62f",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract can be locked by the owner by calling StopGame, preventing further withdrawals\", \"The owner can silently inflate the contract balance by calling StartRoulette or StopGame with a high msg.value\"],\n  \"suspicious_patterns\": [\"state variable 'finished' can be reset by the owner\", \"hardcoded condition in Play function requires msg.sender to be tx.origin\", \"owner can selfdestruct the contract and drain funds\"],\n  \"explanation\": \"The contract has a hidden state variable 'finished' that can be reset by the owner, and the owner can silently inflate the contract balance, making it difficult for non-owners to withdraw funds. The contract also has a suspicious pattern of allowing the owner to selfdestruct the contract and drain funds.\"\n}",
+  "parse_success": true
+}

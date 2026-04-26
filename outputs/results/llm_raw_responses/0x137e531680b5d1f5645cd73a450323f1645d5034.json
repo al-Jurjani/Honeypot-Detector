@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x137e531680b5d1f5645cd73a450323f1645d5034",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"response must match the hashed response set by the question sender\", \"player must send more than 1 ether\"],\n  \"suspicious_patterns\": [\"use of older Solidity version\", \"fallback function allows anyone to send ether to the contract\"],\n  \"explanation\": \"The contract appears to be a simple game where players can answer a question and win the contract's balance if their response matches the expected hash. While there are some suspicious patterns, such as the use of an older Solidity version and a fallback function, the contract's logic does not seem to contain any honeypot deception mechanisms.\"\n}",
+  "parse_success": true
+}

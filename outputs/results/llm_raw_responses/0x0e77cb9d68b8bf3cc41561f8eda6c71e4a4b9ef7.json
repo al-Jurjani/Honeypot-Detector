@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x0e77cb9d68b8bf3cc41561f8eda6c71e4a4b9ef7",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"the contract balance must be exceeded by the sender's value, which can be silently inflated by the owner\"],\n  \"suspicious_patterns\": [\"state variable declared before functions\", \"require statement limiting withdrawal to owner only\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the balance disorder deception type, where the owner can silently inflate the contract balance, making it impossible for victims to satisfy the winning condition. The contract's design allows the owner to withdraw funds while preventing non-owners from doing so. The requirement for the sender's value to exceed the contract balance creates a condition that can be manipulated by the owner.\"\n}",
+  "parse_success": true
+}

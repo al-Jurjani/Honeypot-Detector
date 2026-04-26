@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x35c3034556b81132e682db2f879e6f30721b847c",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"the contract balance can be silently inflated by the owner, making the condition in the Take function impossible to satisfy\"],\n  \"suspicious_patterns\": [\"hardcoded pin code\", \"owner can silently inflate contract balance\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the balance disorder deception type, where the owner can silently inflate the contract balance, making it impossible for non-owners to withdraw funds. The Take function requires the sender to send a value greater than or equal to the contract balance, which can be manipulated by the owner. This makes it unlikely for a non-owner to successfully withdraw funds.\"\n}",
+  "parse_success": true
+}

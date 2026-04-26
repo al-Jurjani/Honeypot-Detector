@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3bafb3af16203c817ee9208c6b8a748398dae689",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"the contract balance can be silently inflated by the owner, making the condition in the multiply function impossible to satisfy\"],\n  \"suspicious_patterns\": [\"hardcoded owner address\", \"state variable declared before functions\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the balance_disorder deception type, where the owner can silently inflate the contract balance, making it impossible for non-owners to satisfy the condition in the multiply function. The contract's design allows the owner to drain all deposited Ether, while preventing victims from withdrawing funds. The contract's legitimacy is further questionable due to the lack of access control and the ability of the owner to transfer funds at will.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x062e659a3c8991bc1739e72c68edb9ac7b5a8ca7",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract owner can start the game and set the result, making it impossible for others to win\", \"The owner can stop the game and claim all funds\"],\n  \"suspicious_patterns\": [\"state variable 'rouletteOwner' declared after functions\", \"function 'StartRoulette' allows owner to set the result\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the 'hidden_state' deception type, where the owner can manipulate the game state to prevent others from winning. The 'rouletteOwner' variable is used to control access to the game, and the 'StartRoulette' function allows the owner to set the result, making it impossible for others to win. The 'StopGame' function also allows the owner to claim all funds, further indicating a honeypot.\"\n}",
+  "parse_success": true
+}

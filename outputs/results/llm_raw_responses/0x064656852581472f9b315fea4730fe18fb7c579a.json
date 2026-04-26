@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x064656852581472f9b315fea4730fe18fb7c579a",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"responseHash can be updated by the questionSender in the newGame function, preventing non-owners from winning\", \"only the questionSender can end the game and claim the balance\"],\n  \"suspicious_patterns\": [\"state variable questionSender declared before functions but can be updated by the deployer\", \"fallback function allows the contract to receive Ether without any restrictions\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variable questionSender, which can be updated by the deployer to prevent non-owners from winning. The newGame function allows the questionSender to update the responseHash, making it impossible for non-owners to satisfy the winning condition.\"\n}",
+  "parse_success": true
+}

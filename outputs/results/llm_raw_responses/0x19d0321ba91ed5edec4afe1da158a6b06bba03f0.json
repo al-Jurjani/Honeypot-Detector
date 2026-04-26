@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x19d0321ba91ed5edec4afe1da158a6b06bba03f0",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"responseHash must match keccak256(answer)\", \"msg.value > 1 ether\"],\n  \"suspicious_patterns\": [\"hardcoded conditions for withdrawal\", \"use of keccak256 for answer verification\"],\n  \"explanation\": \"The contract appears to be a simple question-and-answer game where users can submit answers and potentially win the contract's balance. While there are some conditions that must be met for a user to withdraw funds, they are not overly complex or hidden, and the contract does not exhibit any of the classic honeypot deception types.\"\n}",
+  "parse_success": true
+}

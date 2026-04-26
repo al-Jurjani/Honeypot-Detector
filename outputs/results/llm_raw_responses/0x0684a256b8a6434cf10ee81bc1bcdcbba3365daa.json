@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x0684a256b8a6434cf10ee81bc1bcdcbba3365daa",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"require(msg.sender == tx.origin)\", \"msg.value > 1 ether\"],\n  \"suspicious_patterns\": [\"require(msg.sender == tx.origin)\", \"fallback function is payable\"],\n  \"explanation\": \"The contract appears to be a simple game where users can submit answers to a question and win the contract's balance if their answer is correct. The contract has some suspicious patterns, such as the requirement that the sender must be the transaction origin and the fallback function being payable, but it does not exhibit any of the classic honeypot deception types. The contract's logic is relatively straightforward, and non-owners can potentially withdraw funds if they provide the correct answer.\"\n}",
+  "parse_success": true
+}

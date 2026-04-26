@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xdf77e4a81fba17e0cc39dba521aa4167f388ed7c",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"the contract balance can be silently inflated by the owner, making the condition in the multiplicate function impossible to satisfy\"],\n  \"suspicious_patterns\": [\"state variable declared before functions\", \"hardcoded owner address\", \"transfer to owner in withdraw function\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the balance disorder deception type, where the owner can silently inflate the contract balance, making it impossible for non-owners to satisfy the condition in the multiplicate function. The contract only allows the owner to withdraw funds, and the multiplicate function can be used to trap victim funds. The contract's design suggests that it is intended to deceive users into sending Ether.\"\n}",
+  "parse_success": true
+}
