@@ -1,0 +1,11 @@
+feature,importance
+payable_to_withdraw_ratio,0.303293118273813
+has_fallback,0.23287870892509047
+require_count,0.2199038700623281
+state_changes_before_external_calls,0.09850492269724406
+uses_inline_assembly,0.07687982231650956
+withdrawal_owner_only,0.029052515437576542
+has_withdrawal_function,0.017368954458965195
+has_selfdestruct,0.012351563946552792
+uses_tx_origin,0.009766523881920284
+fallback_reverts_non_owner,0.0
