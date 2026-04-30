@@ -1,0 +1,288 @@
+
+======================================================================
+CASE 1: LLM catches what static missed — 0xaa12936a79848938770bdbc5da0d49fe986678cc (skip_empty_string_literal)
+======================================================================
+Contract: 0xaa12936a79848938770bdbc5da0d49fe986678cc  |  Type: skip_empty_string_literal
+Static-LR pred: MISSED  |  LLM-B pred: CAUGHT
+
+Static features: uses_tx_origin=0, has_fallback=0, fallback_reverts_non_owner=0, require_count=0, has_selfdestruct=0, has_withdrawal_function=1, withdrawal_owner_only=0, uses_inline_assembly=0, state_changes_before_external_calls=0, payable_to_withdraw_ratio=2
+
+LLM explanation: The contract appears to be a honeypot due to the hidden_transfer deception type, where the loggedTransfer function can only be called by the contract itself, and the withdraw function only allows the owner to withdraw funds. The contract's design prevents non-owners from successfully withdrawing their invested amount, making it a potential honeypot.
+
+Source snippet (first 60 lines):
+pragma solidity ^0.4.11;
+
+
+contract PreSaleFund
+{
+    address owner = msg.sender;
+
+    event CashMove(uint amount,bytes32 logMsg,address target,address currentOwner);
+    
+    mapping(address => uint) investors;
+   
+    function loggedTransfer(uint amount, bytes32 logMsg, address target, address currentOwner) 
+    payable
+    {
+       if(msg.sender != address(this))throw;
+       if(target.call.value(amount)())
+       {
+          CashMove(amount, logMsg, target, currentOwner);
+       }
+    }
+    
+    function Invest() 
+    public 
+    payable 
+    {
+        if (msg.value > 0.1 ether)
+        {
+            investors[msg.sender] += msg.value;
+        }
+    }
+
+    function Divest(uint amount) 
+    public 
+    {
+        if ( investors[msg.sender] > 0 && amount > 0)
+        {
+            this.loggedTransfer(amount, "", msg.sender, owner);
+            investors[msg.sender] -= amount;
+        }
+    }
+
+    function GetInvestedAmount() 
+    constant 
+    public 
+    returns(uint)
+    {
+        return investors[msg.sender];
+    }
+
+    function withdraw() 
+    public 
+    {
+        if(msg.sender==owner)
+        {
+            this.loggedTransfer(this.balance, "", msg.sender, owner);
+        }
+    }
+    
+    
+}
+
+======================================================================
+CASE 2: Static catches what LLM missed — 0xd87eaad7afb256c69526a490f402a658f12246fd (hidden_state)
+======================================================================
+Contract: 0xd87eaad7afb256c69526a490f402a658f12246fd  |  Type: hidden_state
+Static-LR pred: CAUGHT  |  LLM-B pred: MISSED
+
+Active static features: uses_tx_origin, has_fallback, require_count, has_selfdestruct, payable_to_withdraw_ratio
+
+LLM explanation: The contract appears to be a simple roulette game where a player can win the contract's balance by guessing the correct number. The contract has some suspicious patterns, such as using an outdated Solidity version and having a payable fallback function, but it does not exhibit any of the typical honeypot deception mechanisms.
+
+Source snippet (first 60 lines):
+pragma solidity ^0.4.20;
+
+contract R
+{
+
+    uint8 public result = 0;
+
+    bool public finished = false;
+
+    address public rouletteOwner;
+
+    function Play(uint8 _number)
+    external
+    payable
+    {
+        require(msg.sender == tx.origin);
+        if(result == _number && msg.value>0.001 ether && !finished)
+        {
+            msg.sender.transfer(this.balance);
+            GiftHasBeenSent();
+        }
+    }
+
+    function StartRoulette(uint8 _number)
+    public
+    payable
+    {
+        if(result==0)
+        {
+            result = _number;
+            rouletteOwner = msg.sender;
+        }
+    }
+
+    function StopGame(uint8 _number)
+    public
+    payable
+    {
+        require(msg.sender == rouletteOwner);
+        GiftHasBeenSent();
+        result = _number;
+        if (msg.value>0.001 ether){
+            selfdestruct(rouletteOwner);
+        }
+    }
+
+    function GiftHasBeenSent()
+    private
+    {
+        finished = true;
+    }
+
+    function() public payable{}
+}
+
+======================================================================
+CASE 3: Legitimate contract flagged by static
+======================================================================
+(Static-LR had no false positives in this evaluation.)
+
+======================================================================
+CASE 4: Hardest honeypot — missed by all pipelines — 0xa395480a4a90c7066c8ddb5db83e2718e750641c (skip_empty_string_literal)
+======================================================================
+Contract: 0xa395480a4a90c7066c8ddb5db83e2718e750641c  |  Type: skip_empty_string_literal
+Static-LR: MISSED  |  LLM-B: MISSED
+
+Static features: all zero (no AST fingerprint)
+
+LLM explanation: The contract does not exhibit any of the classic honeypot deception types, but it does have a reentrancy vulnerability in the loggedTransfer function and only allows the owner to withdraw funds. The contract's logic appears to be straightforward, but the reentrancy issue could be exploited by an attacker.
+
+Source snippet (first 60 lines):
+pragma solidity ^0.4.11;
+
+
+contract PreSaleFund
+{
+    address owner = msg.sender;
+
+    event CashMove(uint amount,bytes32 logMsg,address target,address currentOwner);
+    
+    mapping(address => uint) investors;
+   
+    function loggedTransfer(uint amount, bytes32 logMsg, address target, address currentOwner) 
+    payable
+    {
+       if(msg.sender != address(this))throw;
+       if(target.call.value(amount)())
+       {
+          CashMove(amount, logMsg, target, currentOwner);
+       }
+    }
+    
+    function Invest() 
+    public 
+    payable 
+    {
+        if (msg.value > 1 ether)
+        {
+            investors[msg.sender] += msg.value;
+        }
+    }
+
+    function Divest(uint amount) 
+    public 
+    {
+        if ( investors[msg.sender] > 0 && amount > 0)
+        {
+            this.loggedTransfer(amount, "", msg.sender, owner);
+            investors[msg.sender] -= amount;
+        }
+    }
+
+    function GetInvestedAmount() 
+    constant 
+    public 
+    returns(uint)
+    {
+        return investors[msg.sender];
+    }
+
+    function withdraw() 
+    public 
+    {
+        if(msg.sender==owner)
+        {
+            this.loggedTransfer(this.balance, "", msg.sender, owner);
+        }
+    }
+    
+    
+}
+
+======================================================================
+CASE 5: Most convincing LLM false positive — 0x069758b08b81dfad225fa005fd0a66b0532066a3 (deception_risk=8.0)
+======================================================================
+Contract: 0x069758b08b81dfad225fa005fd0a66b0532066a3  |  True label: LEGITIMATE
+LLM deception_risk_score: 8.00
+
+LLM explanation: The contract has a high deception risk score due to its complex and unclear logic, as well as the use of hardcoded addresses and variables that can be manipulated by the owner. The _p76234 variable is particularly suspicious, as its value is not clear and can be set by the owner using the actionPair function. This suggests that the contract may be a honeypot, designed to trap funds from unsuspecting users.
+
+Hidden conditions: ['The _p76234 variable is used in the transfer function but its value is not clear', 'The actionPair function allows the owner to set the _p76234 variable to any address', 'The _transfer function has a complex condition that can prevent non-owners from transferring tokens']
+
+Suspicious patterns: ['The use of hardcoded addresses in the contract', 'The _p76234 variable is declared after the functions that use it', 'The contract has a complex and unclear logic for transferring tokens']
+
+Source snippet (first 60 lines):
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.9;
+
+
+
+
+
+/**
+
+ * @dev Interface of the ERC20 standard as defined in the EIP.
+
+ */
+
+interface IERC20 {
+
+
+
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
+
+
+    /**
+
+     * @dev Emitted when the allowance of a `spender` for an `owner` is set by
+
+     * a call to {approve}. `value` is the new allowance.
+
+     */
+
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+
+
+
+    event Swap(
+
+        address indexed sender,
+
+        uint amount0In,
+
+        uint amount1In,
+
+        uint amount0Out,
+
+        uint amount1Out,
+
+        address indexed to
+
+    );
+
+    
+
+    /**
+
+     * @dev Returns the amount of tokens in existence.
+
+     */
+
+    function totalSupply() external view returns (uint256);
