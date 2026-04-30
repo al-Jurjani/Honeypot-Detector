@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x5b2028602af2693d50b4157f4acf84d632ec8208",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"inheritance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"Owner variable is re-declared in the child contract, shadowing the parent's Owner variable\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"re-declaration of Owner variable in child contract\"],\n  \"explanation\": \"The contract is a honeypot due to the re-declaration of the Owner variable in the Savings contract, which shadows the Owner variable in the Ownable parent contract. This creates a mismatch where the isOwner modifier checks the parent's Owner, but the Owner variable in the Savings contract is updated separately, effectively preventing non-owners from withdrawing funds.\"\n}",
+  "parse_success": true
+}

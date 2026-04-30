@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xf5615138a7f2605e382375fa33ab368661e017ff",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The owner mapping uses a different key ('Steph\u0435n' vs 'Stephen') to store the new owner, preventing non-owners from becoming the owner and withdrawing funds\"],\n  \"suspicious_patterns\": [\"state variable declared before functions\", \"homoglyph character in variable name ('Steph\u0435n' vs 'Stephen')\"],\n  \"explanation\": \"The contract appears to allow users to become the owner and withdraw funds, but the use of a homoglyph character in the 'becomeOwner' function prevents non-owners from actually becoming the owner. This subtle difference in character encoding traps victim funds, making it a honeypot.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x01791f726b4103694969820be083196cc7c045ff",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a legitimate implementation of various Ethereum standards, including Ownable, IERC20Permit, and ECDSA verification functions. There are no obvious indicators of honeypot deception, and the code seems to follow standard security practices.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x75890afea0658ed67e145df17948c8fceed0affa",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token contract with additional functionality for buying and selling tokens, starting and ending games, and transferring fees. The contract uses OpenZeppelin's SafeMath library and follows standard ERC20 token practices. There are no obvious honeypot deception mechanisms or suspicious patterns in the provided code.\"\n}",
+  "parse_success": true
+}

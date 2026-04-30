@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x7c05c837f7a84dced69ae94f8649bbc3897d2b31",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"gameTime > 1514764800\", \"status == 0\", \"gameTime - 300 > block.timestamp\"],\n  \"suspicious_patterns\": [\"hardcoded timestamp values\", \"owner-only functions\"],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token with additional game-related functionality. While there are some complex conditions and owner-only functions, there is no clear indication of a honeypot deception mechanism. The contract's logic is mostly transparent, and non-owners can withdraw funds under certain conditions.\"\n}",
+  "parse_success": true
+}

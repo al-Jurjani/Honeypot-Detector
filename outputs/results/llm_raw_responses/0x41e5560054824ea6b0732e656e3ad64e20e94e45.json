@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x41e5560054824ea6b0732e656e3ad64e20e94e45",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code is a standard ERC20 token implementation with upgradeable and burnable traits, and does not exhibit any characteristics of a honeypot contract. The code is well-structured, and the logic for token transfer, approval, and upgrade is straightforward and transparent.\"\n}",
+  "parse_success": true
+}

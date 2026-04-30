@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xed55fb58ea9de1f484addcc970463218b4d89cfe",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"responseHash must match keccak256(guess)\", \"msg.value must be greater than 1 ether\"],\n  \"suspicious_patterns\": [\"hardcoded condition in Answer function\", \"use of keccak256 for hash comparison\"],\n  \"explanation\": \"The contract appears to be a simple quiz game where users can answer a question and win the contract's balance if their answer matches the expected hash. While there are some conditions that must be met to withdraw funds, they are not overly complex or hidden, and a non-owner can potentially withdraw funds if they provide the correct answer.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xacfc9577583ded00ae53ae79a0346cca4655c0bb",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"responseHash must match keccak256(_response)\", \"msg.value must be greater than 1 ether\"],\n  \"suspicious_patterns\": [\"reentrancy vulnerability in Play function\", \"use of tx.origin\"],\n  \"explanation\": \"The contract appears to be a simple quiz game where players can submit answers and win the contract's balance if their answer is correct. However, the contract has some security vulnerabilities, such as a reentrancy vulnerability in the Play function and the use of tx.origin, which could be exploited by an attacker. Despite these issues, the contract does not appear to be a honeypot.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x99bab102c0a03438bcfd70119f07ee646db26ddf",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"unlockTime must be in the past\", \"hashPass must match the provided password\", \"msg.sender must be tx.origin\"],\n  \"suspicious_patterns\": [\"use of Solidity version 0.4.19\", \"payable fallback function\"],\n  \"explanation\": \"The contract appears to be a simple gift card implementation, where the owner can set a password and unlock time, and the recipient can claim the funds after the unlock time by providing the correct password. The contract does not exhibit any obvious honeypot characteristics, but its simplicity and use of an outdated Solidity version may raise some concerns.\"\n}",
+  "parse_success": true
+}

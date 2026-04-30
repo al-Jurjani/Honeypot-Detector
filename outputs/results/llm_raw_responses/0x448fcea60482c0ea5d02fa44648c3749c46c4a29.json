@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x448fcea60482c0ea5d02fa44648c3749c46c4a29",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"reciver must be set by sender\", \"hashPass must be set by sender with > 1 ether\", \"closed flag can be set by sender to prevent further changes\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"hardcoded conditions for withdrawal\", \"sender has control over critical state variables\"],\n  \"explanation\": \"The contract has a high deception risk due to its complex logic and hidden conditions, making it difficult for non-owners to withdraw funds. The sender has significant control over critical state variables, allowing them to manipulate the contract's behavior and trap victim funds.\"\n}",
+  "parse_success": true
+}

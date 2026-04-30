@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xad1aa68300588aa5842751ddcab2afd4a69e9016",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"msg.value must be greater than 1 ether to trigger transfer\"],\n  \"suspicious_patterns\": [\"hardcoded fee\", \"use of tx.origin\"],\n  \"explanation\": \"The contract appears to be a simple anonymous transfer contract, with a fee paid to the creator for each transfer. While there are some suspicious patterns, such as the use of tx.origin and a hardcoded fee, the contract does not exhibit any of the classic honeypot deception types. The contract's logic is relatively straightforward, and a non-owner can successfully withdraw funds if they meet the condition of sending more than 1 ether.\"\n}",
+  "parse_success": true
+}

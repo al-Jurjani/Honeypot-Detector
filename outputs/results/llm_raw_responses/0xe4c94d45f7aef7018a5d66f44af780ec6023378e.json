@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xe4c94d45f7aef7018a5d66f44af780ec6023378e",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"complex access control modifiers\"],\n  \"explanation\": \"The contract appears to be a legitimate implementation of a multi-asset token with various features such as transfer, approval, and fee management. While there are some complex access control modifiers and external contract calls, there is no clear indication of a honeypot deception mechanism. The contract's functionality and code structure suggest a genuine attempt to provide a useful service rather than a malicious intent to trap user funds.\"\n}",
+  "parse_success": true
+}

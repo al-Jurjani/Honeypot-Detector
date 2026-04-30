@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xb6f6f6f47e92e517876d30c04198f45a3bc1b281",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract's state variable 'result' is set by the owner in the StartRoulette function, making it impossible for a non-owner to know the correct bet.\", \"The 'finished' flag is set to true after a withdrawal, preventing subsequent withdrawals.\"],\n  \"suspicious_patterns\": [\"state variable 'rouletteOwner' is set by the owner in the StartRoulette function, giving them control over the contract\", \"the contract has a payable fallback function that allows the owner to top up the contract balance\"],\n  \"explanation\": \"The contract appears to be a honeypot due to its hidden state variables and the owner's ability to control the 'result' and 'finished' flags, making it impossible for non-owners to withdraw funds. The contract's design allows the owner to drain the contract balance while preventing victims from doing so.\"\n}",
+  "parse_success": true
+}

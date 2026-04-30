@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x203edf007e4b887bf6e210a227a90b01fc3ad708",
+  "raw_response": "```json\n{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\n    \"transfer tax exemption\",\n    \"trading enabled status\",\n    \"transfer delay\"\n  ],\n  \"suspicious_patterns\": [\n    \"complex transfer logic\",\n    \"multiple mappings and state variables\",\n    \"use of modifiers\"\n  ],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token with additional features such as transfer taxes and trading restrictions. While it has complex logic and multiple state variables, there is no clear indication of a honeypot deception mechanism. However, the contract's complexity and use of modifiers may still pose risks to users.\"\n}\n```",
+  "parse_success": true
+}

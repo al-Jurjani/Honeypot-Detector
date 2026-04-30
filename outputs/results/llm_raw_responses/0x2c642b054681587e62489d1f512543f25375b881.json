@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x2c642b054681587e62489d1f512543f25375b881",
+  "raw_response": "```json\n{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"state variable declared after functions\"],\n  \"explanation\": \"The contract appears to be a standard ERC20 implementation with access control mechanisms. While there are some complex functions and state variables, there are no obvious honeypot patterns or hidden conditions that would prevent a non-owner from withdrawing funds. However, the contract's complexity and the presence of some suspicious patterns warrant a moderate deception risk score.\"\n}\n```",
+  "parse_success": true
+}

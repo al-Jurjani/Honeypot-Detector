@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3f43bd0a3735059907e904a43429f68b06b3522b",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\n    \"hardcoded external address\",\n    \"complex fee structures\",\n    \"owner-only functions\"\n  ],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token with a complex fee structure and owner-only functions. While there are some suspicious patterns, such as hardcoded external addresses and complex fee structures, there is no clear indication of a honeypot deception mechanism. The contract's functionality and permissions seem to be primarily focused on token management and trading, with the owner having significant control over the token's behavior.\"\n}",
+  "parse_success": true
+}

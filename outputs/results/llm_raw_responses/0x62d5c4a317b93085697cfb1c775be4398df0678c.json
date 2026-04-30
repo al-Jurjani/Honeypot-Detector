@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x62d5c4a317b93085697cfb1c775be4398df0678c",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"delegatecall to external contract\", \"owner-only access to critical functions in Lib contract\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"delegatecall to untrusted contract\", \"state variable declared after functions\"],\n  \"explanation\": \"The contract TransferReg uses a delegatecall to an external contract Lib, which is controlled by the deployer, allowing them to manipulate the victim's withdrawal. The Lib contract has owner-only access to critical functions, making it impossible for non-owners to successfully withdraw funds.\"\n}",
+  "parse_success": true
+}

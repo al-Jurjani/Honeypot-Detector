@@ -1,5 +1,5 @@
 {
   "contract_id": "0x4462914b78e2621fb1d18c3be52f6b5e677c0e2d",
-  "raw_response": "API_ERROR: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knhg10j2f42a16mp4fcm7dgz` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99027, Requested 4754. Please try again in 54m26.784s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-  "parse_success": false
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The contract appears to be a standard ERC20 token implementation with ownership and transfer functionality, and does not exhibit any obvious honeypot characteristics. The code is well-structured and follows common Solidity patterns, with no apparent hidden conditions or suspicious patterns that would indicate a honeypot.\"\n}",
+  "parse_success": true
 }

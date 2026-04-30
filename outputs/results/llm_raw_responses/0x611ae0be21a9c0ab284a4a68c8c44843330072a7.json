@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x611ae0be21a9c0ab284a4a68c8c44843330072a7",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract can be locked by the owner by calling StopGame, preventing further withdrawals\", \"The owner can silently inflate the contract balance by calling StartRoulette or StopGame with a value greater than 0.001 ether\"],\n  \"suspicious_patterns\": [\"state variable 'finished' can be reset by the owner\", \"hardcoded condition 'msg.value > 0.001 ether' in multiple functions\"],\n  \"explanation\": \"The contract has a hidden state variable 'finished' that can be controlled by the owner, and the owner can silently inflate the contract balance, making it difficult for non-owners to withdraw funds. The contract's design allows the owner to manipulate the state and prevent withdrawals, indicating a honeypot deception.\"\n}",
+  "parse_success": true
+}

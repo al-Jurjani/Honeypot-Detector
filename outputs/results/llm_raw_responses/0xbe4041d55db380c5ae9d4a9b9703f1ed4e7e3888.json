@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xbe4041d55db380c5ae9d4a9b9703f1ed4e7e3888",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"external Log contract can be controlled by deployer to revert or manipulate withdrawal\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"state variable declared after functions\"],\n  \"explanation\": \"The contract uses an external Log contract at a hardcoded address, which can be controlled by the deployer to revert or manipulate the victim's withdrawal. Additionally, the state variable 'intitalized' is declared after the functions that reference it, making it invisible to casual readers and potentially allowing the deployer to lock out victims.\"\n}",
+  "parse_success": true
+}

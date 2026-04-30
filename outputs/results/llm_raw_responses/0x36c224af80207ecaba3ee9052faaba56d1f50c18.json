@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x36c224af80207ecaba3ee9052faaba56d1f50c18",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"require(amount == 0) when _accountBalanceSpending[sender] is true\"],\n  \"suspicious_patterns\": [\"state variable _accountBalanceSpending can be used to restrict transfers\"],\n  \"explanation\": \"The contract appears to be a standard ERC20 token implementation with some additional features, but it does not exhibit any obvious honeypot characteristics. However, the _accountBalanceSpending state variable can be used to restrict transfers, which may be a suspicious pattern. Overall, the contract seems to be legitimate, but it requires further review to ensure its security and functionality.\"\n}",
+  "parse_success": true
+}

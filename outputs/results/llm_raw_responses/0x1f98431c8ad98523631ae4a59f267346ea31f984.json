@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a legitimate Uniswap V3 factory implementation, with no apparent honeypot deception mechanisms or suspicious patterns. The contract's functionality and logic are consistent with a standard Uniswap V3 factory, and there are no obvious hidden conditions or traps that would prevent non-owners from withdrawing funds.\"\n}",
+  "parse_success": true
+}

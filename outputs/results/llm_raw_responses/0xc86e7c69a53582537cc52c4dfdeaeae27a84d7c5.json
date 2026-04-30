@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xc86e7c69a53582537cc52c4dfdeaeae27a84d7c5",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"complex inheritance structure\"],\n  \"explanation\": \"The contract appears to be a legitimate implementation of a multi-asset management system, with a complex inheritance structure and multiple external contract interactions. While there are some suspicious patterns, such as hardcoded external addresses, there is no clear indication of a honeypot deception mechanism. The contract's functionality and logic seem to be focused on asset management and transfer, with appropriate access control and security measures in place.\"\n}",
+  "parse_success": true
+}

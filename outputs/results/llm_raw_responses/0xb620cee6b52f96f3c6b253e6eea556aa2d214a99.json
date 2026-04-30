@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xb620cee6b52f96f3c6b253e6eea556aa2d214a99",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"owner can silently update state variables\", \"unlockSecret function has a hidden condition that makes it impossible for non-owner to satisfy\"],\n  \"suspicious_patterns\": [\"hardcoded external addresses\", \"state variables declared after functions\", \"owner can drain contract balance\"],\n  \"explanation\": \"The contract has a hidden state variable that can be updated by the owner, making it impossible for non-owners to satisfy the winning condition. The unlockSecret function has a hidden condition that makes it impossible for non-owners to unlock the secret, and the owner can drain the contract balance at any time.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x10a76004162e43b0dd07ae8f2bb297acad21e8ce",
+  "raw_response": "```json\n{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"state variable declared after functions\"],\n  \"explanation\": \"The contract appears to be a standard ERC20 token implementation with additional features for managing allowances and burning tokens. While there are some complex logic and access control mechanisms, there is no clear indication of a honeypot deception mechanism. The contract's functionality seems to be focused on token management and does not exhibit any obvious traps or hidden conditions that would prevent non-owners from withdrawing funds.\"\n}\n```",
+  "parse_success": true
+}

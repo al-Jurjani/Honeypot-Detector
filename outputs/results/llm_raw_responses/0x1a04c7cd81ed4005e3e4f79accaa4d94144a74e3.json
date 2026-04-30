@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1a04c7cd81ed4005e3e4f79accaa4d94144a74e3",
+  "raw_response": "```json\n{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"state variable declared after functions\"],\n  \"explanation\": \"The contract appears to be a standard ERC20 implementation with no obvious honeypot characteristics. The presence of a hardcoded external address and state variables declared after functions are noted, but these do not seem to be used in a malicious manner.\"\n}\n```",
+  "parse_success": true
+}

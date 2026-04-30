@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x01995a697752266d8e748738aaa3f06464b8350b",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external addresses\"],\n  \"explanation\": \"The contract appears to be a legitimate implementation of a token-based system with minting, burning, and redemption functionality. While it does contain some complex logic and external contract calls, there are no obvious indicators of a honeypot deception. The use of hardcoded external addresses may pose some risks, but it does not necessarily imply malicious intent.\"\n}",
+  "parse_success": true
+}

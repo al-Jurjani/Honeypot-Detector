@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x13b87fb8e6152032fd525f64f158c129a230b6ee",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded bet price\", \"use of sha3 for randomness\"],\n  \"explanation\": \"The contract appears to be a legitimate game of chance, where players can win the contract balance by guessing a randomly generated number. The contract's logic is straightforward, and there are no obvious hidden traps or conditions that would prevent a non-owner from withdrawing funds. However, the use of sha3 for randomness and a hardcoded bet price could be considered suspicious patterns.\"\n}",
+  "parse_success": true
+}

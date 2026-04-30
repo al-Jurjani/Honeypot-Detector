@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"revert() in fallback function\", \"use of Solidity version 0.4.4 which is outdated\"],\n  \"explanation\": \"The contract appears to be a standard ERC20 token implementation with no obvious honeypot characteristics. The fallback function reverts, which may prevent accidental Ether transfers, but does not pose a risk to token holders. The contract's logic is straightforward and does not contain any hidden conditions or suspicious patterns that would indicate a honeypot.\"\n}",
+  "parse_success": true
+}

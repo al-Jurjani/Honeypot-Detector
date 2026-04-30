@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xc90233644d2eeb37a7ec641072c85ad272ef2feb",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\n    \"The contract requires a specific sequence of transactions to successfully withdraw funds\",\n    \"The contract has a hidden state variable 'beta' that allows the deployer to control the contract's behavior\"\n  ],\n  \"suspicious_patterns\": [\n    \"The contract has a hardcoded address 'beta' that can be used to drain funds\",\n    \"The contract uses a complex logic to distribute profits, which can be manipulated by the deployer\"\n  ],\n  \"explanation\": \"The contract appears to be a honeypot due to its complex logic and hidden state variables, which can be used to trap victim funds. The contract's requirement for a specific sequence of transactions to withdraw funds and the presence of a hardcoded 'beta' address that can control the contract's behavior are suspicious patterns that indicate a honeypot.\"\n}",
+  "parse_success": true
+}

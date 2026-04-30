@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x85bc00724203d53536072b000c44a2cc16cd12c5",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"old solidity version\"],\n  \"explanation\": \"The contract appears to be a legitimate Decentralized Autonomous Organization (DAO) smart contract, with no obvious honeypot deception mechanisms. However, it uses an old version of Solidity and has some potential security vulnerabilities, such as the use of hardcoded external addresses.\"\n}",
+  "parse_success": true
+}

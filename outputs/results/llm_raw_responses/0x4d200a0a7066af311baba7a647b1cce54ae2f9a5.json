@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x4d200a0a7066af311baba7a647b1cce54ae2f9a5",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"passHasBeenSet can be set to true by the owner, preventing others from setting the password\", \"the owner can set the password and then set passHasBeenSet to true, locking out other users\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"owner can silently lock out victims by setting passHasBeenSet to true\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variable passHasBeenSet, which can be set to true by the owner, preventing others from setting the password and claiming the gift. The owner can exploit this to lock out victims and drain the contract's funds. The contract's design allows the owner to manipulate the state variables and prevent non-owners from withdrawing funds.\"\n}",
+  "parse_success": true
+}

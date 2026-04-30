@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x2f069a1d7a052052458e8b5511e91221eb337c52",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"randomNumber is updated after each guess, making it impossible to guess correctly twice\", \"only the owner can withdraw funds\"],\n  \"suspicious_patterns\": [\"state variable randomNumber is updated after each guess\", \"onlyOwner modifier restricts withdrawal to owner only\", \"fallback function allows contract to receive funds without triggering any logic\"],\n  \"explanation\": \"The contract appears to be a game where players can guess a random number to win the contract's balance. However, the contract's design allows the owner to control the flow of funds and the randomness of the number, making it a potential honeypot. The contract's use of a hidden state variable and restricted withdrawal functionality further supports this assessment.\"\n}",
+  "parse_success": true
+}

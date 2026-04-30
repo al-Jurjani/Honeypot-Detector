@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xf331f7887d31714dce936d9a9846e6afbe82e0a0",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address not found, but complex logic and multiple state variables may hide potential issues\", \"state variables declared before functions\"],\n  \"explanation\": \"The contract appears to be a legitimate token contract with dividend and redemption payout mechanisms. While it has complex logic and multiple state variables, there are no obvious honeypot patterns or hidden conditions that would prevent non-owners from withdrawing funds. However, the contract's complexity and the use of older Solidity version may still pose some risks.\"\n}",
+  "parse_success": true
+}

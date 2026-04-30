@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x303edd4558e28ebc1ce0fa3bdfe9598b45f84deb",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\n    \"taxAmount calculation depends on various conditions, including buyCount, reduceBuyTaxAt, and initialBuyTax\",\n    \"transfer tax is applied based on the transfer amount and tax rate\",\n    \"trading is only open after the owner calls the openTrading function\"\n  ],\n  \"suspicious_patterns\": [\n    \"hardcoded UniswapV2Router address\",\n    \"use of transfer tax and fee mechanisms\",\n    \"owner-only functions for managing trading and tax rates\"\n  ],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token with a tax and fee system, but it has some complex logic and owner-only functions that could be used for malicious purposes. However, there is no clear evidence of a honeypot deception mechanism.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x52682a037a8deab04e708055c751556a0840897a",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"responseHash can be updated by the questionSender at any time, preventing victims from satisfying the winning condition\", \"questionSender has control over the game state and can drain funds\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"questionSender has privileged access to update game state\"],\n  \"explanation\": \"The contract allows the questionSender to update the responseHash and question at any time, effectively giving them control over the game state and allowing them to prevent victims from winning. The questionSender can also drain funds from the contract, making it a potential honeypot.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xb49b1dddf1b3d6e878fd9b73874da7ab0da7e004",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"password must match the hash set by the sender\", \"sender must have set the password and not revoked it\"],\n  \"suspicious_patterns\": [\"use of Solidity version 0.4.19, which is outdated\", \"use of `var` is not present but `pragma solidity` is set to a low version\"],\n  \"explanation\": \"The contract appears to be a simple gift box where the sender sets a password and a message, and the recipient can claim the gift by providing the correct password. The contract does not contain any obvious honeypot patterns, but its simplicity and lack of access control make it vulnerable to potential issues.\"\n}",
+  "parse_success": true
+}

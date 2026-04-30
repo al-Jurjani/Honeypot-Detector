@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3e7840b88396acd80bac66021e1354064461a498",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"Owner can only withdraw funds\", \"Non-owners cannot withdraw due to onlyOwner modifier\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"onlyOwner modifier restricts withdrawal to owner only\", \"fallback function reverts all non-function calls\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the onlyOwner modifier restricting withdrawal to the owner only, and the fallback function reverting all non-function calls. The state variable Owner is also re-declared in the child contract, potentially creating a hidden state that can be manipulated by the deployer.\"\n}",
+  "parse_success": true
+}

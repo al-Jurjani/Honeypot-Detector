@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3268ecb4fcba1ca9f43da8ed05ffc80382cef1da",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"secretSeed can be changed by the owner at any time, making it impossible for users to win\", \"the owner can reseed the contract to prevent users from winning\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"owner can reseed the contract\", \"use of keccak256 to generate a random number\"],\n  \"explanation\": \"The contract appears to be a lottery where users can participate by sending 0.1 ether, but the owner can secretly reseed the contract to prevent users from winning. The use of a secret seed and the ability for the owner to reseed the contract at any time makes it impossible for users to win, making this contract a honeypot.\"\n}",
+  "parse_success": true
+}

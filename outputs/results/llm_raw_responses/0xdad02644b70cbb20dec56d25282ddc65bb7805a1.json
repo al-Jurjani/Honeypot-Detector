@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xdad02644b70cbb20dec56d25282ddc65bb7805a1",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_transfer\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"delegatecall to external contract\", \"requirement for msg.value to exceed Limit\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"delegatecall to external contract\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the use of a delegatecall to an external contract, which could be controlled by the deployer to silently revert or manipulate the victim's withdrawal. The requirement for msg.value to exceed Limit also creates a condition that can be manipulated by the owner, making it difficult for non-owners to withdraw funds.\"\n}",
+  "parse_success": true
+}

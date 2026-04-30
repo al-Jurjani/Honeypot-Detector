@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1d287cc25dad7ccaf76a26bc660c5f7c8e2a05bd",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a standard implementation of an ERC20 token with additional features such as burnable tokens and recoverable tokens. There are no obvious signs of honeypot deception mechanisms, and the code follows standard Solidity best practices.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x561eac93c92360949ab1f1403323e6db345cbf31",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The LogFile contract can be controlled by the deployer to revert or manipulate the withdrawal\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"state variable declared after functions\"],\n  \"explanation\": \"The contract uses an external LogFile contract at a hardcoded address, which can be controlled by the deployer to revert or manipulate the victim's withdrawal. This creates a hidden condition that prevents non-owners from successfully withdrawing funds.\"\n}",
+  "parse_success": true
+}

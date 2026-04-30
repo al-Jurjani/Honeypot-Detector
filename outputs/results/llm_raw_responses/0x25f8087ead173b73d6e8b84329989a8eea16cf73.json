@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x25f8087ead173b73d6e8b84329989a8eea16cf73",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a collection of OpenZeppelin libraries and interfaces, which are widely used and trusted in the Ethereum ecosystem. There are no apparent honeypot deception mechanisms or suspicious patterns in the code.\"\n}",
+  "parse_success": true
+}

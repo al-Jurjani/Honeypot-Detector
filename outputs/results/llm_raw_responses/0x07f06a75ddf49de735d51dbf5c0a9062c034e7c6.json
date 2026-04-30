@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x07f06a75ddf49de735d51dbf5c0a9062c034e7c6",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"only the owner can withdraw funds\", \"5-day delay after last payment\"],\n  \"suspicious_patterns\": [\"hardcoded delay\", \"owner-only withdrawal\"],\n  \"explanation\": \"The contract appears to be a simple game where the player who sends more than the current jackpot becomes the owner and can withdraw the funds after a 5-day delay. While the contract has some restrictive conditions, it does not exhibit any of the typical honeypot deception patterns. The owner-only withdrawal and delay are explicit and do not seem to be intended to trap victim funds.\"\n}",
+  "parse_success": true
+}

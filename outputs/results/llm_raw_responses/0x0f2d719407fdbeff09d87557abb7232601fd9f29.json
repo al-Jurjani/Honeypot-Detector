@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x0f2d719407fdbeff09d87557abb7232601fd9f29",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code is a standard OpenZeppelin AccessControlUpgradeable contract, which is a widely used and well-established library for role-based access control in Ethereum smart contracts. There are no suspicious patterns or hidden conditions that would indicate a honeypot deception.\"\n}",
+  "parse_success": true
+}

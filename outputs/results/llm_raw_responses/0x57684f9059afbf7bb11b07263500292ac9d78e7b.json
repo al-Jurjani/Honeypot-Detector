@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x57684f9059afbf7bb11b07263500292ac9d78e7b",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract's state variable 'finished' can be set to true by the owner, preventing non-owners from withdrawing funds\", \"The 'rouletteOwner' can drain the contract's balance by calling 'StopGame'\"],\n  \"suspicious_patterns\": [\"state variable 'rouletteOwner' can be set by the deployer\", \"function 'StopGame' allows the owner to drain the contract's balance\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the 'hidden_state' deception type, where the 'finished' state variable can be set to true by the owner, preventing non-owners from withdrawing funds. Additionally, the 'rouletteOwner' can drain the contract's balance by calling 'StopGame', making it a potential honeypot.\"\n}",
+  "parse_success": true
+}

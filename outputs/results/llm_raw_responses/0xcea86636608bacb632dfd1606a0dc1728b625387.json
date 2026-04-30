@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xcea86636608bacb632dfd1606a0dc1728b625387",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"require(msg.sender == tx.origin)\", \"responseHash must match keccak256(_response)\"],\n  \"suspicious_patterns\": [\"reentrancy vulnerability in Play function\", \"use of tx.origin\"],\n  \"explanation\": \"The contract appears to be a simple game where users can play and potentially win Ether by answering a question correctly. While there are some suspicious patterns, such as the use of tx.origin and a potential reentrancy vulnerability, the contract does not exhibit any of the classic honeypot deception types. However, the contract's use of an outdated Solidity version and lack of security best practices make it vulnerable to potential attacks.\"\n}",
+  "parse_success": true
+}

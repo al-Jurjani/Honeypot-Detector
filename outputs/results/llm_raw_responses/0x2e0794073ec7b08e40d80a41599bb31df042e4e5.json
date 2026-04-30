@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x2e0794073ec7b08e40d80a41599bb31df042e4e5",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"responseHash can be updated by the questionSender\", \"questionSender can transfer all funds using StopGame\"],\n  \"suspicious_patterns\": [\"state variable responseHash can be reset by questionSender\", \"fallback function allows questionSender to top up contract balance\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variable responseHash, which can be updated by the questionSender, allowing them to control the winning condition. Additionally, the questionSender can transfer all funds using the StopGame function, making it impossible for non-owners to withdraw funds.\"\n}",
+  "parse_success": true
+}

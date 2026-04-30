@@ -1,5 +1,5 @@
 {
   "contract_id": "0x3cb373b4ec92a60d3233e4ea542ca12bcb1bd7ed",
-  "raw_response": "API_ERROR: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knhg10j2f42a16mp4fcm7dgz` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99030, Requested 4843. Please try again in 55m46.272s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-  "parse_success": false
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address in UniswapV2Pair\"],\n  \"explanation\": \"The contract appears to be a standard ERC20 implementation with no obvious honeypot characteristics. The only potential issue is the hardcoded UniswapV2Pair address, but this is not necessarily malicious. The contract allows non-owners to withdraw funds and does not contain any hidden conditions or suspicious patterns that would indicate a honeypot.\"\n}",
+  "parse_success": true
 }

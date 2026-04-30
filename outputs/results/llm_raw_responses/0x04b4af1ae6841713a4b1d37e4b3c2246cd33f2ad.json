@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x04b4af1ae6841713a4b1d37e4b3c2246cd33f2ad",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract code does not exhibit any obvious signs of a honeypot trap, such as hidden state variables, obfuscated code, or suspicious conditional statements. The contract appears to be a standard implementation of a UniswapV2 router and related interfaces, with no apparent mechanisms to deceive or trap users.\"\n}",
+  "parse_success": true
+}

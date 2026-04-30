@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x783cf9c6754bf826f1727620b4baa19714fedf8d",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded fee\", \"use of tx.origin\"],\n  \"explanation\": \"The contract appears to be a simple Ether mixer with a creator fee. The contract allows anyone to make a transfer as long as the sent value is greater than 1 Ether. The creator fee is sent to the contract creator and the specified amount is sent to the provided address. There are no obvious honeypot deception mechanisms in this contract.\"\n}",
+  "parse_success": true
+}

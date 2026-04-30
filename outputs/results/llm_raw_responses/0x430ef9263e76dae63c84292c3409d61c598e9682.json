@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x430ef9263e76dae63c84292c3409d61c598e9682",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a standard implementation of various utility libraries and contracts, including Address, Context, Ownable, IERC20, and SafeMath. There are no obvious signs of honeypot deception mechanisms or suspicious patterns that would indicate a honeypot contract.\"\n}",
+  "parse_success": true
+}

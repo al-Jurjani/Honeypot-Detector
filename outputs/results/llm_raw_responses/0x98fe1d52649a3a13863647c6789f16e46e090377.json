@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x98fe1d52649a3a13863647c6789f16e46e090377",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"emergencyCode and emergencyAmount must match the values set by the owner\", \"only the owner can withdraw funds\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"hardcoded access control via onlyOwner modifier\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variables emergencyCode and emergencyAmount, which can be set by the owner to trap victim funds. The emergencyTransfer function allows the owner to silently update the owner address, preventing non-owners from withdrawing funds.\"\n}",
+  "parse_success": true
+}

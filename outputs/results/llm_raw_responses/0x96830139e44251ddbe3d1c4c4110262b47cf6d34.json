@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x96830139e44251ddbe3d1c4c4110262b47cf6d34",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded time delay in kill function\", \"use of sha3 for randomness\"],\n  \"explanation\": \"The contract appears to be a legitimate game of chance, where players can win the contract balance by guessing a randomly generated number. The contract's logic is straightforward, and there are no obvious hidden traps or deceptive mechanisms. However, the use of a hardcoded time delay in the kill function and the reliance on sha3 for randomness may be considered suspicious patterns.\"\n}",
+  "parse_success": true
+}

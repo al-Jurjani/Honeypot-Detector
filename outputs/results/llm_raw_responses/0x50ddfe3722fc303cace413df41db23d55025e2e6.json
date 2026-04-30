@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x50ddfe3722fc303cace413df41db23d55025e2e6",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"10% fee on exit\", \"minimum contribution of 0.5 ETH\"],\n  \"suspicious_patterns\": [\"state variable 'owner' declared in both parent and child contracts\", \"use of Solidity version 0.4.24 which may have security vulnerabilities\"],\n  \"explanation\": \"The contract appears to be a legitimate fundraising contract, allowing contributors to exit with a 10% fee. However, the use of an outdated Solidity version and the declaration of the 'owner' variable in both parent and child contracts are suspicious patterns that warrant caution. The contract does not exhibit any of the typical honeypot deception types.\"\n}",
+  "parse_success": true
+}

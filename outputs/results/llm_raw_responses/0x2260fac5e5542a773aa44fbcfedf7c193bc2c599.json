@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code is based on OpenZeppelin's standard token contracts and does not exhibit any characteristics of a honeypot contract. The code is well-structured, and the functions are properly implemented, allowing for legitimate token transfers and management. There are no hidden conditions or suspicious patterns that would indicate a honeypot.\"\n}",
+  "parse_success": true
+}

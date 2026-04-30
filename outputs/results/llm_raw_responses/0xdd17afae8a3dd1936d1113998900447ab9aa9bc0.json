@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xdd17afae8a3dd1936d1113998900447ab9aa9bc0",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"external Log contract can be controlled by deployer to revert or manipulate withdrawal\", \"LogFile can be set to any address by deployer before initialization\"],\n  \"suspicious_patterns\": [\"hardcoded external address not present but external contract Log can be controlled\", \"state variables declared before functions\"],\n  \"explanation\": \"The contract is likely a honeypot due to its reliance on an external Log contract, which can be controlled by the deployer to revert or manipulate the victim's withdrawal. The deployer can set the LogFile to any address before initialization, allowing them to control the flow of funds.\"\n}",
+  "parse_success": true
+}

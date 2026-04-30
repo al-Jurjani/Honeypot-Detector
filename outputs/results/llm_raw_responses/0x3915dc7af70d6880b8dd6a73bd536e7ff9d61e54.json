@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3915dc7af70d6880b8dd6a73bd536e7ff9d61e54",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\"],\n  \"explanation\": \"The contract appears to be a standard ERC20 token implementation with additional features for liquidity pool management and token burning. While it has some complex logic, there are no obvious indicators of a honeypot deception. The presence of a hardcoded external address for the Uniswap router may be a point of concern, but it is a common practice in DeFi contracts.\"\n}",
+  "parse_success": true
+}

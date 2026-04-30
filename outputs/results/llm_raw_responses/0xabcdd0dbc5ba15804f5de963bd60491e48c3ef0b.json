@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xabcdd0dbc5ba15804f5de963bd60491e48c3ef0b",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded return rates and limits\", \"recursive function call in returnInvestmentRecursive\"],\n  \"explanation\": \"The contract appears to be a legitimate investment platform, allowing users to invest and withdraw funds based on a calculated return value. The contract's logic is transparent, and there are no obvious hidden conditions or suspicious patterns that would indicate a honeypot. However, the use of hardcoded return rates and limits, as well as the recursive function call in returnInvestmentRecursive, could be improved for better security and maintainability.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x7bc51b19abe2cfb15d58f845dad027feab01bfa0",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"investors[msg.sender].investment == 0\", \"amount == 0\", \"sumDividend > lastDividend\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"protected modifier restricts access to loggedTransfer function\", \"onlyOwner modifier restricts access to critical functions\"],\n  \"explanation\": \"The contract has a high deception risk score due to its complex logic and restricted access to critical functions. The hidden_state honeypot type is identified as the contract's state variables are declared after the functions, and the protected modifier restricts access to the loggedTransfer function, making it difficult for non-owners to withdraw funds. The contract's logic is designed to favor the owner, allowing them to control the distribution of dividends and transfers.\"\n}",
+  "parse_success": true
+}

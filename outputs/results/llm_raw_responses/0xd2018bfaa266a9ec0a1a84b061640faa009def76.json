@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xd2018bfaa266a9ec0a1a84b061640faa009def76",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"Owner can update their address in the withdraw function\", \"Only the hardcoded address 0x1Fb3acdBa788CA50Ce165E5A4151f05187C67cd6 can update the Owner address\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"state variable update in a conditional statement\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state update mechanism in the withdraw function, where the Owner address can be updated by a specific hardcoded address, and the Command function allows the Owner to drain funds to any address. The Get function also has a suspicious condition that allows the Owner to transfer the contract's balance to themselves.\"\n}",
+  "parse_success": true
+}

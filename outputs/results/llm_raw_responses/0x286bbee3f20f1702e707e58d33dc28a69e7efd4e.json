@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x286bbee3f20f1702e707e58d33dc28a69e7efd4e",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"whitelist_enabled\", \"allow_contributions\", \"gas_price_max\", \"individual_cap\"],\n  \"suspicious_patterns\": [\"hardcoded external addresses\", \"state variables declared after functions\"],\n  \"explanation\": \"The contract appears to be a legitimate token sale contract with a complex logic for handling contributions, refunds, and token withdrawals. While there are some suspicious patterns, such as hardcoded external addresses and state variables declared after functions, they do not seem to be part of a honeypot deception mechanism. The contract's logic is mostly transparent, and non-owners can withdraw their tokens and ether under certain conditions.\"\n}",
+  "parse_success": true
+}

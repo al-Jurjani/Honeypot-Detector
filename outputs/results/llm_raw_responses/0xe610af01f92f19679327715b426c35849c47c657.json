@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xe610af01f92f19679327715b426c35849c47c657",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The Log contract can be controlled by the deployer to revert or manipulate the victim's withdrawal\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"use of older Solidity version\"],\n  \"explanation\": \"The contract uses an external Log contract at a hardcoded address, which can be controlled by the deployer to manipulate the victim's withdrawal. The use of an older Solidity version and the lack of input validation also increase the risk of deception.\"\n}",
+  "parse_success": true
+}

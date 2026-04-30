@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x70c01853e4430cae353c9a7ae232a6a95f6cafd9",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"owner can change emergency code and value to lock out victims\", \"only owner can withdraw funds\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"hardcoded owner-only access control\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the presence of hidden state variables and owner-only access control, which can be used to lock out victims and prevent them from withdrawing funds. The use of an emergency code and value, which can be set by the owner, adds an additional layer of control that can be used to trap victim funds. The contract's design suggests that it is intended to deceive users into depositing Ether, which can then be drained by the owner.\"\n}",
+  "parse_success": true
+}

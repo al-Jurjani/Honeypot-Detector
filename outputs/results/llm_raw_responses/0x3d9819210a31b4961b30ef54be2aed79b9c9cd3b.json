@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code does not exhibit any characteristics of a honeypot contract, such as hidden traps or deceptive logic. The code appears to be a legitimate implementation of a financial contract, with clear and transparent logic for error reporting and mathematical operations.\"\n}",
+  "parse_success": true
+}

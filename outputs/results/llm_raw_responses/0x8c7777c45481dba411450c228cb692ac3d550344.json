@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x8c7777c45481dba411450c228cb692ac3d550344",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The Log contract can be controlled by the deployer to revert or manipulate the victim's withdrawal\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"external contract call\"],\n  \"explanation\": \"The contract uses an external Log contract at a hardcoded address, which can be controlled by the deployer to silently revert or manipulate the victim's withdrawal, making it a straw man honeypot. The CashOut function also uses a reentrancy-prone call to msg.sender, but the main issue is the external Log contract. The contract's design allows the deployer to drain all deposited Ether by manipulating the Log contract.\"\n}",
+  "parse_success": true
+}

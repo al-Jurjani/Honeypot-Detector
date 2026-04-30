@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xbf64a825e602a4f1c31480a470e99e1d896c88a7",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"state variable declared after functions\"],\n  \"explanation\": \"The contract appears to be a legitimate crowdsale contract with a clear and transparent logic. The withdrawal function is restricted to the presale owner or the contract owner, which is a common practice in crowdsale contracts. There are no obvious hidden conditions or suspicious patterns that would indicate a honeypot contract.\"\n}",
+  "parse_success": true
+}

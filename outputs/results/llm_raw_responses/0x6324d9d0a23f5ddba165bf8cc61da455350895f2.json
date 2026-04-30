@@ -1,5 +1,5 @@
 {
   "contract_id": "0x6324d9d0a23f5ddba165bf8cc61da455350895f2",
-  "raw_response": "API_ERROR: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knhg10j2f42a16mp4fcm7dgz` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99051, Requested 1992. Please try again in 15m1.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-  "parse_success": false
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"secretSeed can be changed by the owner using forceReseed, making it impossible for non-owners to win\", \"the owner can reseed the contract to prevent a non-owner from winning\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"owner can silently change critical state variables\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the presence of a hidden state variable, secretSeed, which can be changed by the owner using the forceReseed function, making it impossible for non-owners to win. The owner can reseed the contract to prevent a non-owner from winning, effectively trapping funds.\"\n}",
+  "parse_success": true
 }

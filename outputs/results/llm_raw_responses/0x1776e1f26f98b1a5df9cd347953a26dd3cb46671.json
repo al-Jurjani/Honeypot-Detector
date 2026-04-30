@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1776e1f26f98b1a5df9cd347953a26dd3cb46671",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"complex inheritance structure\"],\n  \"explanation\": \"The contract appears to be a legitimate implementation of the Numeraire token, with a focus on security and upgradability. While there are some complex patterns and hardcoded addresses, they do not seem to be indicative of a honeypot trap. The contract's use of OpenZeppelin's Shareable and Pausable contracts also suggests a focus on security and best practices.\"\n}",
+  "parse_success": true
+}

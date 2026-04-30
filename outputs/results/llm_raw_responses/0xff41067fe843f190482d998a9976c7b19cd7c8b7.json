@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xff41067fe843f190482d998a9976c7b19cd7c8b7",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code is a standard implementation of the ERC721 Non-Fungible Token Standard and does not contain any suspicious patterns or hidden conditions that would indicate a honeypot. The contract's functionality is transparent and follows the expected behavior of an ERC721 token.\"\n}",
+  "parse_success": true
+}

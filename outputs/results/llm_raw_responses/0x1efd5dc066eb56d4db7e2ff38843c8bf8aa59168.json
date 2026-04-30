@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1efd5dc066eb56d4db7e2ff38843c8bf8aa59168",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded constants\", \"complex approval logic\"],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token implementation with a fixed supply and transfer restrictions. The owner has control over enabling transfers and associating the token with a crowdsale contract. While there are some complex approval logic and hardcoded constants, there are no obvious honeypot deception mechanisms present.\"\n}",
+  "parse_success": true
+}

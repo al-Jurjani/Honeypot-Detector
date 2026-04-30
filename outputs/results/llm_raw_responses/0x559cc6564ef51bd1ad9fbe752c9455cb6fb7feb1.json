@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x559cc6564ef51bd1ad9fbe752c9455cb6fb7feb1",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"var not used in loop counters\", \"hardcoded logic but no external calls\"],\n  \"explanation\": \"The contract appears to be a legitimate game where players can guess a number and win the contract balance if they guess correctly. The contract has a clear and simple logic, and there are no obvious hidden conditions or suspicious patterns that would indicate a honeypot. The use of a hardcoded logic for generating the random number and the lack of external calls make the contract relatively transparent.\"\n}",
+  "parse_success": true
+}

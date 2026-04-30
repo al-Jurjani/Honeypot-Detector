@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xe6f245bb5268b16c5d79a349ec57673e477bd015",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"owner can reseed the secret seed at will, making it impossible for victims to win\", \"participated mapping prevents an address from winning more than once\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"owner can silently reseed the secret seed\", \"hardcoded external address not present but owner2 is set by constructor\"],\n  \"explanation\": \"The contract appears to be a lottery where participants can win the jackpot if their lucky number matches the winner's lucky number. However, the owner can reseed the secret seed at will, making it impossible for victims to win. Additionally, the participated mapping prevents an address from winning more than once, and the owner can drain the contract's funds using the kill function.\"\n}",
+  "parse_success": true
+}

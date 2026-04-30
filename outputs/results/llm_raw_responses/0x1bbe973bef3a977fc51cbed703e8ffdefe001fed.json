@@ -1,5 +1,5 @@
 {
   "contract_id": "0x1bbe973bef3a977fc51cbed703e8ffdefe001fed",
-  "raw_response": "API_ERROR: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knhg10j2f42a16mp4fcm7dgz` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99021, Requested 4348. Please try again in 48m30.816s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-  "parse_success": false
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The contract is a standard ERC20 token implementation with additional features such as permit, pausable, and burnable functionalities. It does not contain any hidden traps or deceptive mechanisms that would prevent a non-owner from withdrawing funds. The contract's logic is transparent and follows standard OpenZeppelin guidelines.\"\n}",
+  "parse_success": true
 }

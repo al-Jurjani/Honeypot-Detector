@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x2ea4cfd3e45f8f239717e60597f77a42de57fa18",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code is from OpenZeppelin's Ownable and Initializable contracts, which are well-established and widely used in the Ethereum ecosystem. There are no indications of honeypot deception mechanisms, and the code appears to be legitimate and secure.\"\n}",
+  "parse_success": true
+}

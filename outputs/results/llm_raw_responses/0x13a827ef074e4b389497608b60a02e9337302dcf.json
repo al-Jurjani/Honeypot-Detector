@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x13a827ef074e4b389497608b60a02e9337302dcf",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\n    \"tax calculation based on block number and holder's last transfer timestamp\",\n    \"swap enabled only when contract token balance exceeds _taxSwapThreshold and _buyCount exceeds _preventSwapBefore\"\n  ],\n  \"suspicious_patterns\": [\n    \"hardcoded Uniswap router address\",\n    \"complex tax calculation logic\"\n  ],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token with a complex tax calculation system and swap functionality. While there are some suspicious patterns, such as the hardcoded Uniswap router address, the contract does not exhibit any obvious honeypot characteristics. The tax calculation logic is complex, but it seems to be designed to incentivize holders to keep their tokens for a longer period.\"\n}",
+  "parse_success": true
+}

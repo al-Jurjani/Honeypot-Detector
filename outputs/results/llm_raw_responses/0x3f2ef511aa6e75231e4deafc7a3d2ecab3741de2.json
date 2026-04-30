@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3f2ef511aa6e75231e4deafc7a3d2ecab3741de2",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"Owner can update their address in the withdraw function\", \"redeem function transfers balance to Owner before transferring to msg.sender, but since balance is 0 after Owner transfer, msg.sender gets 0\"],\n  \"suspicious_patterns\": [\"hardcoded external address in withdraw function\", \"state variable Owner can be updated by Owner in withdraw function\", \"redeem function has unexpected transfer order\"],\n  \"explanation\": \"The contract has a hidden state deception, where the Owner can update their address in the withdraw function and the redeem function transfers the balance to the Owner before the msg.sender, effectively trapping funds. The contract's logic is designed to favor the Owner, making it a honeypot.\"\n}",
+  "parse_success": true
+}

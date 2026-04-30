@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x017bcaee2456d8bd0e181f94165919a4a2ecc2d9",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"inheritance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"owner variable is re-declared in the child contract, shadowing the parent's owner variable\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"hardcoded owner assignment in the constructor\"],\n  \"explanation\": \"The contract is a honeypot due to the inheritance disorder deception type, where the child contract's owner variable shadows the parent's owner variable, allowing the deployer to exploit this mismatch to retake ownership and prevent non-owners from withdrawing funds. The useEmergencyCode function also allows the owner to transfer ownership to a new address, potentially trapping victim funds. The contract's design and functionality suggest a legitimate bank contract, but the underlying deception mechanism makes it a honeypot.\"\n}",
+  "parse_success": true
+}

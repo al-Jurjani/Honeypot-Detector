@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x417af59cf25163ad3eafabc466c7b024cd18d780",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a collection of OpenZeppelin contracts, including Ownable, BeaconProxy, and ERC1967Proxy, which are commonly used for access control and proxy functionality. There are no apparent honeypot deception mechanisms or suspicious patterns in the code.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xaa12936a79848938770bdbc5da0d49fe986678cc",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_transfer\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"loggedTransfer function can only be called by the contract itself\", \"withdraw function only allows owner to withdraw funds\"],\n  \"suspicious_patterns\": [\"hardcoded owner address\", \"use of throw statement\", \"loggedTransfer function has unusual parameters\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden_transfer deception type, where the loggedTransfer function can only be called by the contract itself, and the withdraw function only allows the owner to withdraw funds. The contract's design prevents non-owners from successfully withdrawing their invested amount, making it a potential honeypot.\"\n}",
+  "parse_success": true
+}

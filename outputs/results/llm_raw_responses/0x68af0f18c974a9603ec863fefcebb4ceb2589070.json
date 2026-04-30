@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x68af0f18c974a9603ec863fefcebb4ceb2589070",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"password must match hashPwd\", \"cashOutTime must be in the past\", \"only myadress can withdraw after setting password\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"hardcoded conditions for withdrawal\", \"fallback function allows owner to top up contract balance\"],\n  \"explanation\": \"The contract appears to be a honeypot due to its hidden state variables and conditions that make it difficult for non-owners to withdraw funds. The owner can silently update the state variables, such as myadress and cashOutTime, to prevent victims from withdrawing. The contract's design allows the owner to drain all deposited Ether, making it a potential honeypot.\"\n}",
+  "parse_success": true
+}

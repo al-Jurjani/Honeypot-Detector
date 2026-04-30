@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xcb71b51d9159a49050d56516737b4b497e98bb99",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract can be closed by the deployer, preventing further deposits and withdrawals\", \"The sender can only set the unlock time, allowing the deployer to control when the gift can be claimed\"],\n  \"suspicious_patterns\": [\"state variable 'closed' can be set to true by the deployer, preventing withdrawals\", \"function 'CloseGift' allows the deployer to lock out victims\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the presence of a 'closed' state variable that can be set to true by the deployer, preventing further deposits and withdrawals. The 'CloseGift' function allows the deployer to lock out victims, making it a hidden state deception type. The contract's logic is designed to trap victim funds, making it a high-risk honeypot.\"\n}",
+  "parse_success": true
+}

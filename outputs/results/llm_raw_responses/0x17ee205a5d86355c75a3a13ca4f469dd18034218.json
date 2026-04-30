@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x17ee205a5d86355c75a3a13ca4f469dd18034218",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract code appears to be a standard ERC20 token implementation with additional functionality for an Ownable contract. There are no obvious honeypot deception mechanisms or suspicious patterns that would indicate a honeypot contract.\"\n}",
+  "parse_success": true
+}

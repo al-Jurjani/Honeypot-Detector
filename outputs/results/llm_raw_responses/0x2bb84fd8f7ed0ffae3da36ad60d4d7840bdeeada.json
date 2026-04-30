@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x2bb84fd8f7ed0ffae3da36ad60d4d7840bdeeada",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a legitimate implementation of a Rocket Pool network contract, with no obvious signs of honeypot deception. The contract uses standard Solidity libraries and follows best practices for security and readability.\"\n}",
+  "parse_success": true
+}

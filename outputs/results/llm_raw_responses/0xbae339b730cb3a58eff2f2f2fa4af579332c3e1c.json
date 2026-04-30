@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xbae339b730cb3a58eff2f2f2fa4af579332c3e1c",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"require(msg.sender == tx.origin)\", \"require(msg.sender == rouletteOwner)\"],\n  \"suspicious_patterns\": [\"pragma solidity ^0.4.20\", \"function() public payable{}\"],\n  \"explanation\": \"The contract appears to be a simple roulette game where a player can win the contract's balance by guessing a number. The contract has some suspicious patterns, such as using an outdated Solidity version and having a payable fallback function, but it does not exhibit any of the typical honeypot deception mechanisms. The contract's logic is relatively straightforward, and a non-owner can potentially withdraw funds by guessing the correct number.\"\n}",
+  "parse_success": true
+}

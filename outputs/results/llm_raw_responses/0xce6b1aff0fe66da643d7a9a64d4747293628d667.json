@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xce6b1aff0fe66da643d7a9a64d4747293628d667",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"responseHash must match keccak256(_response)\", \"msg.value must be greater than 1 ether\"],\n  \"suspicious_patterns\": [\"use of older Solidity version (^0.4.20)\", \"fallback function is payable\"],\n  \"explanation\": \"The contract appears to be a simple game where users can play by sending a response to a question, and if the response is correct, they can withdraw the contract's balance. The contract does not exhibit any obvious honeypot characteristics, but it does use an older version of Solidity and has a payable fallback function, which could potentially be exploited.\"\n}",
+  "parse_success": true
+}

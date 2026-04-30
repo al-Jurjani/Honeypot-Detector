@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token implementation with a complex system of weights and siphons for managing token balances. There are no obvious honeypot deception mechanisms present, and the contract's logic seems to be focused on facilitating token transfers and management rather than trapping user funds.\"\n}",
+  "parse_success": true
+}

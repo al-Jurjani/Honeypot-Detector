@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x24d2e9c7ae42c4f1e994f79753afaf51829b3f25",
+  "raw_response": "```json\n{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address in uniswapV2Pair variable\"],\n  \"explanation\": \"The contract appears to be a standard ERC20 implementation with no obvious honeypot characteristics. The presence of a hardcoded external address in the uniswapV2Pair variable is noted, but it does not seem to be used in a malicious way. Overall, the contract seems legitimate.\"\n}\n```",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xc5ce9c06a0caf0e4cbd90572b6550feafd69b740",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"sender must set unlock time\", \"recipient must match the one set by sender\"],\n  \"suspicious_patterns\": [\"use of outdated solidity version\", \"use of empty fallback function\"],\n  \"explanation\": \"The contract appears to be a simple gift contract where the sender sets a recipient and an unlock time, and the recipient can claim the gift after the unlock time. While there are some suspicious patterns, such as the use of an outdated Solidity version and an empty fallback function, the contract does not exhibit any of the typical honeypot deception mechanisms.\"\n}",
+  "parse_success": true
+}

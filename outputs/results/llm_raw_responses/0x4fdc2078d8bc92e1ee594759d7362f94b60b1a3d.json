@@ -1,5 +1,5 @@
 {
   "contract_id": "0x4fdc2078d8bc92e1ee594759d7362f94b60b1a3d",
-  "raw_response": "API_ERROR: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knhg10j2f42a16mp4fcm7dgz` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99066, Requested 2527. Please try again in 22m56.351999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-  "parse_success": false
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The owner can reseed the contract at will, changing the secret seed and making it impossible for a non-owner to win\", \"The contract's balance can be drained by the owner using the kill function\"],\n  \"suspicious_patterns\": [\"The use of a private secretSeed variable that can be changed by the owner\", \"The presence of a forceReseed function that allows the owner to reseed the contract at will\"],\n  \"explanation\": \"The contract appears to be a legitimate lottery, but the owner has significant control over the secret seed and can reseed the contract at will, making it impossible for non-owners to win. The contract's balance can also be drained by the owner using the kill function, indicating a honeypot deception.\"\n}",
+  "parse_success": true
 }

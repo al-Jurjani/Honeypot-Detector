@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x58978e8caccf56fadaa80ef52f5c684045306839",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"only owners can withdraw funds\", \"minimum deposit of 1 ether required\"],\n  \"suspicious_patterns\": [\"multiple owner variables\", \"throw statements instead of revert\"],\n  \"explanation\": \"The contract appears to be a legitimate investment fund with multiple owners, but it has some suspicious patterns such as multiple owner variables and throw statements instead of revert. However, it does not exhibit any of the typical honeypot deception mechanisms, and non-owners cannot withdraw funds.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x702b4ec04e119d4b4ac93f3fcc6aa266e7b66499",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_transfer\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"transfers to owner before reaching victim's transfer call\", \"only admin can call payout function\"],\n  \"suspicious_patterns\": [\"hardcoded transfers to owner in purchase function\", \"only admin can call payout function\"],\n  \"explanation\": \"The contract has a hidden transfer mechanism in the purchase function where it transfers funds to the owner before reaching the victim's transfer call, and only the admin can call the payout function, making it a honeypot. The contract's design allows the owner to drain all deposited Ether, while preventing victims from successfully claiming funds.\"\n}",
+  "parse_success": true
+}

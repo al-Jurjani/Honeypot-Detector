@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x52c2d09acf0ef12c487ae0c20a92d4f9a4abbfd1",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"inheritance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract has two 'owner' variables, one in the 'owned' contract and one in the 'MyNewBank' contract, which can cause confusion and allow the deployer to exploit the contract\"],\n  \"suspicious_patterns\": [\"state variable 'owner' declared in both parent and child contracts\", \"use of 'throw' which is deprecated\"],\n  \"explanation\": \"The contract is a honeypot due to the 'inheritance_disorder' type, where the 'owner' variable is declared in both the 'owned' and 'MyNewBank' contracts, allowing the deployer to exploit the contract. The 'withdraw' function is also restricted to the 'owner' only, making it impossible for non-owners to withdraw funds. The contract's design and use of deprecated syntax raise suspicions about its legitimacy.\"\n}",
+  "parse_success": true
+}

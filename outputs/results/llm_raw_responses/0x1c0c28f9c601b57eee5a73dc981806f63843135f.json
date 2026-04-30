@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1c0c28f9c601b57eee5a73dc981806f63843135f",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address in constructor\", \"owner-only function with potential for abuse\"],\n  \"explanation\": \"The contract appears to be a standard ERC20 token implementation with some additional features. While there are some potential issues, such as the hardcoded external address in the constructor and the owner-only function, they do not seem to be part of a honeypot deception mechanism. The contract's logic and functionality are mostly transparent and follow standard ERC20 practices.\"\n}",
+  "parse_success": true
+}

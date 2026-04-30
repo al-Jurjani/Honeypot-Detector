@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1f2540c9ae2a92efa9be7b104bc921d975966586",
+  "raw_response": "```json\n{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\n    \"transfer amount exceeds _maxTxAmount\",\n    \"balanceOf(to) + amount exceeds maxWallet\",\n    \"swapEnabled and contractTokenBalance > swapTokensAtAmount\"\n  ],\n  \"suspicious_patterns\": [\n    \"hardcoded external address (uniswapV2Router)\",\n    \"state variables declared after functions\",\n    \"complex conditional logic in _transfer function\"\n  ],\n  \"explanation\": \"The contract has a high deception risk score due to its complex logic and hidden conditions that can prevent non-owners from withdrawing funds. The _transfer function contains multiple conditional statements that can trap funds, and the contract's state variables are declared after the functions, making it difficult to track the contract's state.\"\n}\n```",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xc57fc2c9fd3130933bd29f01ff940dc52bc4115b",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"secretNumber is hardcoded to 6, making it impossible for players to win\", \"the winning condition is commented out\"],\n  \"suspicious_patterns\": [\"hardcoded secretNumber\", \"commented out winning condition\", \"owner can kill the contract and drain funds after 6 hours\"],\n  \"explanation\": \"The contract appears to be a game where players can win the contract balance by guessing a secret number, but the secret number is hardcoded to 6 and the winning condition is commented out, making it impossible for players to win. The owner can also kill the contract and drain funds after 6 hours, indicating a honeypot deception.\"\n}",
+  "parse_success": true
+}

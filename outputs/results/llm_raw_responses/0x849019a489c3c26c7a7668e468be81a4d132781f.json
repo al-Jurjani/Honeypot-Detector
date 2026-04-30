@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x849019a489c3c26c7a7668e468be81a4d132781f",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"Only Owner_01, Owner_02, or Owner_03 can refund deposits\", \"Owner_O1, Owner_O2, and Owner_O3 are not initialized in the same way as Creator\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"hardcoded external address not observed but multiple owner addresses\", \"conditional refund based on owner check\"],\n  \"explanation\": \"The contract has multiple owner addresses (Owner_01, Owner_02, Owner_03) that can control the refund of deposits, but these addresses are not initialized in the same way as the Creator, making it difficult for non-owners to withdraw funds. The contract also has a hidden condition that only allows owners to refund deposits, making it a potential honeypot.\"\n}",
+  "parse_success": true
+}

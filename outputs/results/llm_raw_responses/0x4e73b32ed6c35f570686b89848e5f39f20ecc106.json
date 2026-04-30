@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x4e73b32ed6c35f570686b89848e5f39f20ecc106",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"requirement for balance to be greater than or equal to MinSum and _am\"],\n  \"suspicious_patterns\": [\"hardcoded external address is not present, but LogFile contract is used\", \"reentrancy vulnerability in Collect function\"],\n  \"explanation\": \"The contract does not exhibit any of the 8 known honeypot deception types, but it does have a reentrancy vulnerability in the Collect function. The contract allows non-owners to withdraw funds if their balance is greater than or equal to MinSum and the requested amount.\"\n}",
+  "parse_success": true
+}

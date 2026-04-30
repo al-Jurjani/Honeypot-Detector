@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x340844b39aacbdb4e7718fa14a95758f87a09a9a",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The `withdraw` function is restricted to the owner only\", \"The `transferOwner` function has a hidden condition that only allows owner transfer when the contract balance is 0\"],\n  \"suspicious_patterns\": [\"state variable `Owner` declared in both `Ownable` and `DepositCapsule` contracts\", \"the `transferOwner` function has a conditional statement that only updates the `Owner` when the contract balance is 0\"],\n  \"explanation\": \"The contract has a hidden state deception due to the `Owner` variable being declared in both the `Ownable` and `DepositCapsule` contracts, and the `transferOwner` function having a conditional statement that only updates the `Owner` when the contract balance is 0, effectively making it impossible for non-owners to withdraw funds.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x2a79324c19ef2b89ea98b23bc669b7e7c9f8a517",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a standard implementation of a proxy contract using OpenZeppelin's contracts, with no apparent honeypot deception mechanisms. The code is well-structured and follows best practices, with no suspicious patterns or hidden conditions that would indicate a honeypot.\"\n}",
+  "parse_success": true
+}

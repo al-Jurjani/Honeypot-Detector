@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xaf531dc0b3b1151af48f3d638eeb6fe6acdfd59f",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"require(msg.sender == tx.origin)\", \"msg.value > 0.5 ether\", \"result == _number\"],\n  \"suspicious_patterns\": [\"hardcoded value in require statement\", \"state variable 'finished' can be set by owner\"],\n  \"explanation\": \"The contract has a high deception risk score due to its balance disorder mechanism, where the owner can silently inflate the contract balance by calling the StartRoulette function, making it impossible for victims to satisfy the condition of msg.value > 0.5 ether. Additionally, the contract has suspicious patterns such as hardcoded values and state variables that can be set by the owner, indicating a potential honeypot.\"\n}",
+  "parse_success": true
+}

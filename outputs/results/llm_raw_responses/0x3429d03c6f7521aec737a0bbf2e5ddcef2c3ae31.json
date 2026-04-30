@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3429d03c6f7521aec737a0bbf2e5ddcef2c3ae31",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract is an implementation of the ERC20 token standard from OpenZeppelin, a well-known and reputable source. The contract does not contain any suspicious patterns or hidden conditions that would indicate it is a honeypot. The contract's functionality is straightforward and follows the standard ERC20 token behavior, allowing users to transfer, approve, and manage their tokens without any deceptive mechanisms.\"\n}",
+  "parse_success": true
+}

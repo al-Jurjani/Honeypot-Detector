@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x37541ebf8b4e25d36fbaa9b4c4eaad8c06314d6f",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract only allows the owner to withdraw funds\", \"The contract's balance is updated after each game, making it difficult for players to guess the correct number\"],\n  \"suspicious_patterns\": [\"The contract uses a hardcoded random number generator\", \"The contract has a fallback function that allows it to receive Ether without executing any specific logic\"],\n  \"explanation\": \"The contract appears to be a honeypot due to its restrictive withdrawal policy, which only allows the owner to withdraw funds. Additionally, the contract's use of a hardcoded random number generator and its fallback function that allows it to receive Ether without executing any specific logic raise suspicions about its legitimacy.\"\n}",
+  "parse_success": true
+}

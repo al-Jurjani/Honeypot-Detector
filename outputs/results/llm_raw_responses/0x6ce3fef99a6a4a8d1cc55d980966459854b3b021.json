@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x6ce3fef99a6a4a8d1cc55d980966459854b3b021",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"the contract can be locked by anyone who knows the password, preventing further deposits\", \"the owner can front-run a withdrawal by calling Lock with the correct password\"],\n  \"suspicious_patterns\": [\"use of tx.origin, which can be tampered with by a malicious contract\", \"lack of input validation for _pass and _hash\"],\n  \"explanation\": \"The contract appears to be a simple gift card implementation, but it has some security vulnerabilities, such as the use of tx.origin and lack of input validation. However, it does not exhibit any of the classic honeypot deception patterns, and a non-owner can successfully withdraw funds if they know the correct password.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xb5aff01f3e820735fac9abb594dc9993cb9e5bd2",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"regeneration + SIX_HOURS < block.timestamp\", \"totalplayers == 1\", \"totalplayers == 2\", \"totalplayers >= 3\"],\n  \"suspicious_patterns\": [\"hardcoded external address is not present but mainPlayer has full control\", \"state variables declared before functions\", \"complex logic in contribute_toTheGame function\"],\n  \"explanation\": \"The contract has a complex logic in the contribute_toTheGame function and the mainPlayer has full control over the contract, which can lead to hidden state changes that prevent non-owners from withdrawing funds. The contract also has a high risk of being a honeypot due to its complex logic and the mainPlayer's control.\"\n}",
+  "parse_success": true
+}

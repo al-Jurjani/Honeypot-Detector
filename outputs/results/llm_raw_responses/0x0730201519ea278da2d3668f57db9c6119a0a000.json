@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x0730201519ea278da2d3668f57db9c6119a0a000",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\"],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token with additional features such as max buy and sell amounts, treasury address, and swap functionality. While there are some hardcoded external addresses, they seem to be part of the Uniswap protocol and do not pose a significant risk. The contract's logic is mostly straightforward, and there are no obvious hidden conditions or suspicious patterns that would indicate a honeypot.\"\n}",
+  "parse_success": true
+}

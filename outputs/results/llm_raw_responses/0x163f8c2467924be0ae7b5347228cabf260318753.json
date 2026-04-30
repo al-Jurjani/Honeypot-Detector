@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x163f8c2467924be0ae7b5347228cabf260318753",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token contract with inflation control mechanisms, and there are no obvious honeypot deception patterns. The contract's logic and functionality seem to be transparent and well-documented.\"\n}",
+  "parse_success": true
+}

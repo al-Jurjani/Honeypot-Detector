@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3668eba58190c7bb2d63cb484467ff0a42fb3367",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"questionSender has control over the contract's state\", \"only questionSender can stop the game or update the question and response hash\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"questionSender has significant control over the contract\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variable 'questionSender' which has significant control over the contract, allowing the deployer to manipulate the game state and prevent non-owners from withdrawing funds. The 'questionSender' can stop the game, update the question and response hash, and transfer the contract's balance to themselves, making it difficult for victims to withdraw their funds.\"\n}",
+  "parse_success": true
+}

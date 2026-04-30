@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x45804880de22913dafe09f4980848ece6ecbaf78",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code is a standard implementation of a proxy contract, specifically designed for upgradeability and administrative tasks. It does not contain any hidden traps or deceptive mechanisms that would prevent a non-owner from withdrawing funds, as it is primarily intended for delegating calls to other contracts and managing administrative tasks.\"\n}",
+  "parse_success": true
+}

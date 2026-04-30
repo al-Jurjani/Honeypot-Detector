@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a legitimate implementation of an Access Control system, with no apparent honeypot deception mechanisms. The code is well-structured, and the functionality is transparent, with no hidden conditions or suspicious patterns that would indicate a honeypot.\"\n}",
+  "parse_success": true
+}

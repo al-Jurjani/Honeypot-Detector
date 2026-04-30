@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3b0e5a2a318616b1673b0bc7a91dd7c6d85b7e56",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"require statements in various functions\", \"conditional logic in the default function\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"conditional logic based on block number\"],\n  \"explanation\": \"The contract appears to be a legitimate crowdsale contract with various functions for depositing, withdrawing, and managing tokens. While there are some complex conditional statements and hardcoded addresses, they do not seem to be indicative of a honeypot contract. However, the contract's logic and functionality should be thoroughly reviewed to ensure that it operates as intended.\"\n}",
+  "parse_success": true
+}

@@ -1,5 +1,5 @@
 {
   "contract_id": "0x60bf91ac87fee5a78c28f7b67701fbcfa79c18ec",
-  "raw_response": "API_ERROR: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knhg10j2f42a16mp4fcm7dgz` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99024, Requested 3307. Please try again in 33m33.984s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-  "parse_success": false
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"complex modifier logic\"],\n  \"explanation\": \"The contract appears to be a legitimate Events History universal contract, with no obvious honeypot deception mechanisms. The contract's logic is complex, but it does not contain any of the typical honeypot patterns. The contract's use of modifiers and external libraries may pose some risks, but they do not seem to be maliciously intended.\"\n}",
+  "parse_success": true
 }

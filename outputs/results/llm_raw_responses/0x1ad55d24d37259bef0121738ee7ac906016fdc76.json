@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1ad55d24d37259bef0121738ee7ac906016fdc76",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\n    \"tax calculation based on block number and holder's last transfer timestamp\",\n    \"swap enabled only after a certain number of buys and when contract token balance exceeds a threshold\"\n  ],\n  \"suspicious_patterns\": [\n    \"hardcoded UniswapV2 router address\",\n    \"owner-only functions for executing transfers and approving tax balances\"\n  ],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token with a tax system and UniswapV2 integration. While it has some complex logic and owner-only functions, there are no obvious honeypot deception mechanisms. However, the tax calculation and swap logic may be confusing for some users, and the hardcoded UniswapV2 router address could be a potential security risk.\"\n}",
+  "parse_success": true
+}

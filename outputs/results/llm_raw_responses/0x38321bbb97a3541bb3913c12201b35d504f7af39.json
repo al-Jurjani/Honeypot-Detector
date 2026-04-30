@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x38321bbb97a3541bb3913c12201b35d504f7af39",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\n    \"The contract relies on an external REV contract at a hardcoded address, which can be controlled by the deployer to manipulate the victim's withdrawal.\",\n    \"The owner can silently drain all deposited Ether by calling the emergencyStop function.\"\n  ],\n  \"suspicious_patterns\": [\n    \"Hardcoded external address of the REV contract\",\n    \"Owner-only functions that can be used to drain funds\"\n  ],\n  \"explanation\": \"The contract is a honeypot due to its reliance on an external REV contract at a hardcoded address, which can be controlled by the deployer to manipulate the victim's withdrawal. Additionally, the owner can silently drain all deposited Ether by calling the emergencyStop function, making it a straw_man type honeypot.\"\n}",
+  "parse_success": true
+}

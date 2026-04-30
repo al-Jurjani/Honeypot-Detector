@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xfae0300c03a1ea898176bcb39f919c559f64f4ff",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"inheritance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract has a state variable 'owner' that shadows the 'owner' variable in the parent contract, creating a mismatch\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"shadowing of parent contract variable\"],\n  \"explanation\": \"The contract is a honeypot due to the 'inheritance_disorder' type, where the child contract 'deposittest' re-declares its own 'owner' variable, shadowing the parent contract's 'owner' variable. This creates a mismatch where the 'onlyowner' modifier checks the parent's 'owner', but assignments update the child's 'owner'. The 'withdraw' function is restricted to the owner, but due to the shadowing, only the deployer can withdraw funds.\"\n}",
+  "parse_success": true
+}

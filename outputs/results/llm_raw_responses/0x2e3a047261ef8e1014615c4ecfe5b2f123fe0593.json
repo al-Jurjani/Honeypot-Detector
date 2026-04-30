@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x2e3a047261ef8e1014615c4ecfe5b2f123fe0593",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\n    \"transfer delay enabled\",\n    \"max wallet size limit\",\n    \"max transaction amount limit\"\n  ],\n  \"suspicious_patterns\": [\n    \"hardcoded addresses\",\n    \"complex logic in transfer function\"\n  ],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token with additional features such as transfer delays, max wallet sizes, and transaction limits. While there are some complex logic and hardcoded addresses, there is no clear indication of a honeypot deception mechanism.\"\n}",
+  "parse_success": true
+}

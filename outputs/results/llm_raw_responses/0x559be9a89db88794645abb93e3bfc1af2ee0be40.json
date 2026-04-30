@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x559be9a89db88794645abb93e3bfc1af2ee0be40",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded time delay in kill function\"],\n  \"explanation\": \"The contract appears to be a legitimate game of chance, where players can win the contract balance by guessing a secret number. The contract has a clear and straightforward logic, and there are no obvious hidden conditions or suspicious patterns that would indicate a honeypot. The kill function has a time delay, but it is not a hidden condition and is clearly stated in the contract.\"\n}",
+  "parse_success": true
+}

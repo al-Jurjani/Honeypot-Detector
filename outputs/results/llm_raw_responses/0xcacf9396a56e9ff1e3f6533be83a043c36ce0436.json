@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xcacf9396a56e9ff1e3f6533be83a043c36ce0436",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"inheritance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract's `withdraw` function is restricted to the owner only, despite the presence of a `deposits` mapping that suggests users can withdraw their funds\"],\n  \"suspicious_patterns\": [\"state variable `Owner` declared in both parent and child contracts, potentially causing shadowing\", \"onlyOwner modifier restricts withdrawal to the contract owner\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the `inheritance_disorder` type, where the child contract `ETHVault` re-declares the `Owner` variable, potentially causing a mismatch between the parent and child contracts. This allows the deployer to restrict withdrawals to the owner only, while making it seem like users can deposit and withdraw funds.\"\n}",
+  "parse_success": true
+}

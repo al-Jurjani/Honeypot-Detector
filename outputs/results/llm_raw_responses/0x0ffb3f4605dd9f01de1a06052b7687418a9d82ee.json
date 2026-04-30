@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x0ffb3f4605dd9f01de1a06052b7687418a9d82ee",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded timestamp\"],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token contract with additional functionality for buying and selling tokens, as well as game-related features. The contract does not exhibit any obvious honeypot characteristics, and the code is well-structured and follows standard Solidity practices. However, the use of hardcoded timestamps may be considered a suspicious pattern, but it does not seem to be used for malicious purposes in this contract.\"\n}",
+  "parse_success": true
+}

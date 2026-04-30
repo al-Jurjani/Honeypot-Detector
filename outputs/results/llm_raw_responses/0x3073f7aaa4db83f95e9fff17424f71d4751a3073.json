@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3073f7aaa4db83f95e9fff17424f71d4751a3073",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code is a standard implementation of a transparent upgradeable proxy from the OpenZeppelin library, with no apparent honeypot deception mechanisms. The contract's functionality is focused on proxying calls to an implementation contract and handling upgrades, with access control mechanisms in place to restrict certain actions to the admin.\"\n}",
+  "parse_success": true
+}

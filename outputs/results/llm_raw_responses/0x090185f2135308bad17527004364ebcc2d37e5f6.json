@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x090185f2135308bad17527004364ebcc2d37e5f6",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token implementation with ownership and minting functionality. There are no obvious honeypot deception mechanisms or suspicious patterns that would prevent a non-owner from withdrawing funds.\"\n}",
+  "parse_success": true
+}

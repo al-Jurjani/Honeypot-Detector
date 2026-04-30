@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x807a3ef8a8dbdd7fc9863df695bbe8691e450e8e",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external addresses\"],\n  \"explanation\": \"The contract appears to be a legitimate implementation of the Oraclize API, with no obvious signs of honeypot deception. The presence of hardcoded external addresses is noted, but this is a common pattern in Oraclize contracts and does not necessarily indicate malicious intent.\"\n}",
+  "parse_success": true
+}

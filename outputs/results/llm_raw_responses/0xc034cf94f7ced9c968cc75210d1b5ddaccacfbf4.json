@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xc034cf94f7ced9c968cc75210d1b5ddaccacfbf4",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"responseHash must match keccak256(_response)\", \"msg.value must be greater than 1 ether\"],\n  \"suspicious_patterns\": [\"use of outdated Solidity version\", \"use of payable fallback function\"],\n  \"explanation\": \"The contract appears to be a simple game where users can play by sending a response to a question. The contract has some outdated features, but it does not exhibit any of the typical honeypot deception patterns. A non-owner can successfully withdraw funds if they provide the correct response and send more than 1 ether.\"\n}",
+  "parse_success": true
+}

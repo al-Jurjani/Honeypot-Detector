@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x04c154b66cb340f3ae24111cc767e0184ed00cc6",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a standard ERC20 token implementation with access control, and does not exhibit any characteristics of a honeypot contract. The code is well-structured, and the logic is straightforward, with no hidden or obfuscated code that could be used to trap victim funds.\"\n}",
+  "parse_success": true
+}

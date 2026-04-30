@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x03209bde47da583547c17c47e7ca74bfa3dfb404",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"mintingFinished must be false for buy() to succeed\", \"goalReached must be false for refund() to succeed\"],\n  \"suspicious_patterns\": [\"hardcoded external address in donateAuthor()\", \"use of revert() instead of require() for input validation\"],\n  \"explanation\": \"The contract appears to be a legitimate token sale contract with a voting mechanism, but it has some suspicious patterns such as a hardcoded external address and the use of revert() instead of require() for input validation. However, it does not exhibit any of the typical honeypot characteristics.\"\n}",
+  "parse_success": true
+}

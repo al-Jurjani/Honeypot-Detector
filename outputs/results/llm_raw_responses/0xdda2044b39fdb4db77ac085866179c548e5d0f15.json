@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xdda2044b39fdb4db77ac085866179c548e5d0f15",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"response must match the hashed response set by the question sender\", \"msg.value must be greater than 1 ether\"],\n  \"suspicious_patterns\": [\"use of outdated solidity version\", \"use of a fallback function\"],\n  \"explanation\": \"The contract appears to be a simple quiz game where users can try to answer a question and win the contract's balance if their response matches the hashed response set by the question sender. While there are some suspicious patterns, such as the use of an outdated solidity version and a fallback function, there is no clear indication of a honeypot deception mechanism. The contract's logic is relatively straightforward, and non-owners can potentially withdraw funds if they provide the correct response.\"\n}",
+  "parse_success": true
+}

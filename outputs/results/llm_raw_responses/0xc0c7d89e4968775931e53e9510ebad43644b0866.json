@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xc0c7d89e4968775931e53e9510ebad43644b0866",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"inheritance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"owner can only withdraw funds\", \"contributors can only exit with 10% of their contribution\"],\n  \"suspicious_patterns\": [\"state variable 'owner' declared in both parent and child contracts\", \"onlyOwner modifier restricts access to withdrawal function\"],\n  \"explanation\": \"The contract is a honeypot due to the 'inheritance_disorder' type, where the child contract 'joojinta' declares its own 'owner' variable, shadowing the parent contract 'Ownable's 'owner' variable. This creates a mismatch where the 'onlyOwner' modifier checks the parent's 'owner', but the child's 'owner' is updated, effectively restricting non-owners from withdrawing funds.\"\n}",
+  "parse_success": true
+}

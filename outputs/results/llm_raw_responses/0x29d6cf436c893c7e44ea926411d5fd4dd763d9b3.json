@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x29d6cf436c893c7e44ea926411d5fd4dd763d9b3",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"randomNumber is generated on contract creation and never changes\", \"only owner can withdraw funds using the withdraw function\"],\n  \"suspicious_patterns\": [\"randomNumber is generated using a potentially predictable method\", \"owner can withdraw funds at any time using the withdraw function\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state of the randomNumber variable, which is generated on contract creation and never changes. This means that once the contract is deployed, the outcome of the game is already determined, and players have no chance of winning. The owner can also withdraw funds at any time using the withdraw function, making it a potential trap for victims.\"\n}",
+  "parse_success": true
+}

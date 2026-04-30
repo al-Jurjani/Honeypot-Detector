@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xf6b55acbbc49f4524aa48d19281a9a77c54de10f",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"complex logic in tokenGenerationEvent\"],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token contract with a token generation event and a refund mechanism. While there are some complex logic and hardcoded external addresses, there is no clear indication of a honeypot deception mechanism. The contract's functionality and security seem to be aligned with standard practices in the industry.\"\n}",
+  "parse_success": true
+}

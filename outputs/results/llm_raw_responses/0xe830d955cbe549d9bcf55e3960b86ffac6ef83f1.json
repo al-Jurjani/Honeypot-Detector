@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xe830d955cbe549d9bcf55e3960b86ffac6ef83f1",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract's state variables are declared after the functions, making them invisible to casual readers\", \"The deployer can update the state variables at will to lock out victims\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"hardcoded conditions for withdrawal\"],\n  \"explanation\": \"The contract appears to be a honeypot due to its hidden state variables and the ability of the deployer to update them at will, making it impossible for non-owners to withdraw funds. The contract's design allows the deployer to silently lock out victims by updating the state variables, making it a classic example of a hidden_state honeypot.\"\n}",
+  "parse_success": true
+}

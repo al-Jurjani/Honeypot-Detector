@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x0d83102ec81853f3334bd2b9e9fcce7adf96ccc7",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The owner can reseed the contract at will, changing the secret seed and making it impossible for a non-owner to win\", \"The contract's balance can be drained by the owner using the kill function\"],\n  \"suspicious_patterns\": [\"The owner can reseed the contract at will using the forceReseed function\", \"The contract has a hidden state variable (secretSeed) that can be changed by the owner\"],\n  \"explanation\": \"The contract appears to be a legitimate lottery, but the owner has the ability to reseed the contract at will, changing the secret seed and making it impossible for a non-owner to win. Additionally, the contract's balance can be drained by the owner using the kill function, indicating that it is a honeypot.\"\n}",
+  "parse_success": true
+}

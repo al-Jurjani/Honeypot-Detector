@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xbc272b58e7cd0a6002c95afd1f208898d756c580",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"sender must be set before GetGift can be called\", \"unlockTime must be set before GetGift can be called\"],\n  \"suspicious_patterns\": [\"use of Solidity version 0.4.20 which is outdated\", \"use of a fallback function without any logic\"],\n  \"explanation\": \"The contract appears to be a simple gift-giving contract where the sender sets the recipient and unlock time, and the recipient can claim the gift after the unlock time. While there are some suspicious patterns, such as the use of an outdated Solidity version and a fallback function without any logic, the contract does not exhibit any of the known honeypot deception types.\"\n}",
+  "parse_success": true
+}

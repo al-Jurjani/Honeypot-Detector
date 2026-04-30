@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x4a220e6096b25eadb88358cb44068a3248254675",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The contract is a standard ERC20 token implementation with no apparent honeypot characteristics. It follows best practices and does not contain any suspicious code patterns or hidden conditions that would prevent non-owners from withdrawing funds.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x45510db2481353178db5abb87c96805fadad0724",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\"],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token contract with a unique name and symbol. It has a complex fee structure and wallet limits, but these are clearly defined in the code. The contract also has a clear and standard ownership structure, with the deployer and owner having specific roles. There are no obvious hidden conditions or suspicious patterns that would indicate a honeypot.\"\n}",
+  "parse_success": true
+}

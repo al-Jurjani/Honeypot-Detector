@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xf4ac238121585456dee1096fed287f4d8906d519",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"owner can change price to prevent buying\", \"only owner can cash out\", \"airDrop function can be used to drain funds\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"state variable declared after functions\", \"owner can control contract state\"],\n  \"explanation\": \"The contract has a high deception risk score due to its complex structure and hidden state variables, which can be controlled by the owner to prevent non-owners from withdrawing funds. The contract's use of modifiers and conditional statements also makes it difficult to understand its behavior, increasing the risk of it being a honeypot.\"\n}",
+  "parse_success": true
+}

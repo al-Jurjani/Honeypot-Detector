@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x752406cbfd32593fc422da69cdd702d1eaadc121",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"type_deduction_overflow\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"var i overflows at 255, causing infinite gas consumption\"],\n  \"suspicious_patterns\": [\"var loop counter\", \"inferred uint8 type\"],\n  \"explanation\": \"The contract contains a loop with a var-declared counter that overflows at 255, causing infinite gas consumption and preventing non-owners from withdrawing funds. The owner can still withdraw funds using the withdraw function. The contract's Test function appears to be a trap, designed to consume all gas and prevent victims from withdrawing their funds.\"\n}",
+  "parse_success": true
+}

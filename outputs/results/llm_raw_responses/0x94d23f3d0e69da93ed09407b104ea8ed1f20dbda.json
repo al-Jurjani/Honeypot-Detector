@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x94d23f3d0e69da93ed09407b104ea8ed1f20dbda",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"hardcoded external address in withdraw_to_reward_contract function\", \"owner-only kill function\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"owner-only function\"],\n  \"explanation\": \"The contract has a high deception risk score due to the presence of a hardcoded external address in the withdraw_to_reward_contract function, which could be controlled by the deployer to trap victim funds. Additionally, the owner-only kill function allows the deployer to drain the contract's balance, making it a potential honeypot.\"\n}",
+  "parse_success": true
+}

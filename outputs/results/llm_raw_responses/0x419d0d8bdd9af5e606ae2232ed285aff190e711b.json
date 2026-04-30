@@ -1,5 +1,5 @@
 {
   "contract_id": "0x419d0d8bdd9af5e606ae2232ed285aff190e711b",
-  "raw_response": "API_ERROR: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knhg10j2f42a16mp4fcm7dgz` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99039, Requested 4105. Please try again in 45m16.416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-  "parse_success": false
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"state variable declared after functions\"],\n  \"explanation\": \"The contract appears to be a legitimate token contract with a complex architecture, including a controller and ledger. While there are some suspicious patterns, such as hardcoded external addresses and state variables declared after functions, they do not seem to be part of a honeypot deception mechanism. The contract's logic and functionality are well-structured and follow standard token contract patterns.\"\n}",
+  "parse_success": true
 }

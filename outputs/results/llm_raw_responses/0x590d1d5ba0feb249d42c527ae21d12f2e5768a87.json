@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x590d1d5ba0feb249d42c527ae21d12f2e5768a87",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"responseHash can be updated by the questionSender, making it impossible for others to guess the correct answer\", \"questionSender can drain the contract balance using the StopQ function\"],\n  \"suspicious_patterns\": [\"state variable questionSender declared before functions but can be updated by the deployer\", \"function NewQ allows questionSender to update responseHash\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variable questionSender, which can be used by the deployer to update the responseHash and drain the contract balance. The Try function requires a correct answer and a deposit of more than 1 ether, but the deployer can silently update the responseHash using the NewQ function, making it impossible for victims to withdraw funds.\"\n}",
+  "parse_success": true
+}

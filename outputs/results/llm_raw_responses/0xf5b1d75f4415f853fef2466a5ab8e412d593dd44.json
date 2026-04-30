@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xf5b1d75f4415f853fef2466a5ab8e412d593dd44",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"type_deduction_overflow\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"infinite loop due to var i1 and i2 being uint8, causing overflow\"],\n  \"suspicious_patterns\": [\"var loop counter\", \"infinite while loop\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the use of var to declare loop counters i1 and i2, which are inferred as uint8 and can cause an infinite loop due to overflow. This prevents non-owners from withdrawing funds, and the owner can drain the contract balance using the withdraw function.\"\n}",
+  "parse_success": true
+}

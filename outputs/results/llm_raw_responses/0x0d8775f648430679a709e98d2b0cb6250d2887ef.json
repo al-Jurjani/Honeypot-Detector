@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\"],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token implementation with a crowdsale mechanism. The code is well-structured and follows standard Solidity practices. While there are some hardcoded external addresses, they seem to be part of the intended functionality and do not pose a deception risk.\"\n}",
+  "parse_success": true
+}

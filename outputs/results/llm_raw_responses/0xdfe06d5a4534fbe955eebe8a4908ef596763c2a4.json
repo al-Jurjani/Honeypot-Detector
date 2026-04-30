@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xdfe06d5a4534fbe955eebe8a4908ef596763c2a4",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\"],\n  \"explanation\": \"The contract appears to be a legitimate token sale contract with a clear and transparent mechanism for buying tokens. The contract has a hard cap and returns excess funds to the sender if the cap is exceeded. The use of a hardcoded external address for the TokenManagerEntity is a potential security risk, but it does not appear to be a honeypot deception mechanism.\"\n}",
+  "parse_success": true
+}

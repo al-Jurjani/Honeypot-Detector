@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x463f235748bc7862deaa04d85b4b16ac8fafef39",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The Log contract can be controlled by the deployer to revert or manipulate the withdrawal\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"use of an external contract for logging\"],\n  \"explanation\": \"The contract uses an external Log contract at a hardcoded address, which can be controlled by the deployer to revert or manipulate the withdrawal, making it a straw man honeypot. The deployer can exploit this to trap victim funds. The contract's use of an external contract for logging and the lack of access control on the Log contract's functions increase the deception risk.\"\n}",
+  "parse_success": true
+}

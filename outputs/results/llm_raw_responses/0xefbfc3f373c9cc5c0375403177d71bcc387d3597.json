@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xefbfc3f373c9cc5c0375403177d71bcc387d3597",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract requires the sender to know the correct password hash to withdraw funds\", \"The contract can be locked by the owner by calling the PassHasBeenSet function\", \"The owner can change the receiver address at any time\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"hardcoded conditions for withdrawal\", \"owner can lock the contract\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variables and conditions that prevent non-owners from withdrawing funds. The owner can lock the contract and change the receiver address, making it impossible for victims to withdraw funds. The contract's design allows the owner to silently control the withdrawal process.\"\n}",
+  "parse_success": true
+}

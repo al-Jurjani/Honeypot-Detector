@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3d8a10ce3228cb428cb56baa058d4432464ea25d",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_transfer\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"require(0.5 ether < total)\", \"if (block.number > 5040270 )\", \"if (_owner == msg.sender )\"],\n  \"suspicious_patterns\": [\"hardcoded block number\", \"conditional transfer to owner\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the presence of hidden conditions in the withdrawAll function, which allows the owner to drain the contract's balance while preventing non-owners from withdrawing funds. The conditional transfer to the owner and the hardcoded block number are suspicious patterns that contribute to the honeypot deception.\"\n}",
+  "parse_success": true
+}

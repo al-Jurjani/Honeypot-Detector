@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xefba96262f277cc8073da87e564955666d30a03b",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"The contract only pays out if the calculated lucky number matches the predefined LuckyNumber (7)\"],\n  \"suspicious_patterns\": [\"hardcoded reseed interval (1000 blocks)\", \"owner can force reseed\"],\n  \"explanation\": \"The contract appears to be a legitimate lottery system, where participants can win a jackpot if their address matches a randomly generated lucky number. While there are some suspicious patterns, such as the hardcoded reseed interval and the owner's ability to force a reseed, these do not necessarily indicate a honeypot. The contract's logic is mostly transparent, and non-owners can potentially withdraw funds if they win the lottery.\"\n}",
+  "parse_success": true
+}

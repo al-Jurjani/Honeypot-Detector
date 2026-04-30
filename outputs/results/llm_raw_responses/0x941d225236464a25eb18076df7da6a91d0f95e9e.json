@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x941d225236464a25eb18076df7da6a91d0f95e9e",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"the Log contract can be controlled by the deployer to revert or manipulate the withdrawal\", \"the CashOut function requires the block number to be greater than the lastBlock, which can be updated by the deployer\"],\n  \"suspicious_patterns\": [\"hardcoded external address is not present but the Log contract is controlled by the deployer\", \"the use of a separate Log contract for logging messages\"],\n  \"explanation\": \"The contract is likely a honeypot due to the use of a separate Log contract that can be controlled by the deployer to manipulate the withdrawal. The CashOut function also requires the block number to be greater than the lastBlock, which can be updated by the deployer to prevent withdrawals.\"\n}",
+  "parse_success": true
+}

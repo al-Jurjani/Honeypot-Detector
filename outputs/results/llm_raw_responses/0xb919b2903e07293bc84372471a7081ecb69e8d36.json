@@ -1,5 +1,5 @@
 {
   "contract_id": "0xb919b2903e07293bc84372471a7081ecb69e8d36",
-  "raw_response": "API_ERROR: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knhg10j2f42a16mp4fcm7dgz` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99048, Requested 4752. Please try again in 54m43.2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-  "parse_success": false
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external addresses\"],\n  \"explanation\": \"The contract appears to be a legitimate implementation of the Oraclize API, with no obvious honeypot deception mechanisms. The presence of hardcoded external addresses is noted, but this is a common pattern in Oraclize contracts and does not necessarily indicate malicious intent.\"\n}",
+  "parse_success": true
 }

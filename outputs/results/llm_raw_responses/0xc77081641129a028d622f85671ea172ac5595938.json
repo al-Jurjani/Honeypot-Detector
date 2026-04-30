@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xc77081641129a028d622f85671ea172ac5595938",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"responseHash can be updated by the questionSender\", \"questionSender has control over the contract's state\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"questionSender has control over the contract's state\"],\n  \"explanation\": \"The contract has a hidden state deception mechanism, where the questionSender has control over the contract's state and can update the responseHash, making it impossible for non-owners to withdraw funds. The contract's design allows the questionSender to manipulate the contract's state and trap victim funds.\"\n}",
+  "parse_success": true
+}

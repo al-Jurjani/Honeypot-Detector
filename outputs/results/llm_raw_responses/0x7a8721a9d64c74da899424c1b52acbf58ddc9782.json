@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x7a8721a9d64c74da899424c1b52acbf58ddc9782",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The Log contract can be manipulated by the owner to revert or manipulate the victim's withdrawal\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"use of tx.origin\"],\n  \"explanation\": \"The contract uses a separate Log contract that can be manipulated by the owner, allowing them to control the flow of funds and potentially trap victim deposits. The use of tx.origin in the onlyOwner modifier also introduces a security risk.\"\n}",
+  "parse_success": true
+}

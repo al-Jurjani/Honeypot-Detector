@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x95be22039da3114d17a38b9e7cd9b3576de83924",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\"],\n  \"explanation\": \"The contract appears to be a legitimate implementation of a tournament-based game, with a clear and transparent mechanism for joining tournaments and winning rewards. However, the use of a hardcoded external address for the EDCoreInterface contract may pose a risk if the contract at that address is compromised or manipulated. Overall, the contract does not exhibit any obvious honeypot characteristics, but caution is advised due to the potential risks associated with the external contract call.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x175744fb0849584129fa3d0e6350c00206d95d2f",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"whitelist_enabled\", \"allow_contributions\", \"gas_price_max\"],\n  \"suspicious_patterns\": [\"hardcoded external addresses\", \"state variables declared after functions\"],\n  \"explanation\": \"The contract appears to be a legitimate token sale contract with various features such as whitelisting, gas price limits, and fee structures. While there are some suspicious patterns, such as hardcoded external addresses and state variables declared after functions, they do not seem to be part of a honeypot deception mechanism. The contract's logic and functionality are complex, but they appear to be intended for a legitimate token sale.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xedc77f347a7dbdba2319e86ef5681535f8da75e0",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"use of older Solidity version (0.4.23)\"],\n  \"explanation\": \"The contract appears to be a legitimate presale contract with a clear and transparent structure. It uses established libraries like SafeMath and Ownable, and its logic is straightforward. While it does use a older version of Solidity and has some hardcoded external addresses, these do not seem to be used in a malicious way.\"\n}",
+  "parse_success": true
+}

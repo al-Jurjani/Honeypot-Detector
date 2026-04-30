@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x251848c3fc50274f5fda449919f083dc937b48b2",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"investors[msg.sender] must be greater than or equal to targetAmount to withdraw\", \"investors[msg.sender] must be greater than or equal to amount to withdraw\"],\n  \"suspicious_patterns\": [\"state variable admin declared before functions but can be changed by the current admin\", \"hardcoded fee calculation in FundTransfer function\"],\n  \"explanation\": \"The contract has a hidden state variable 'admin' that can be changed by the current admin, and the 'investors' mapping is used to track user balances, but the 'targetAmount' variable creates a hidden condition that must be met before a user can withdraw funds. The contract's logic is complex and has several suspicious patterns, indicating a high deception risk score.\"\n}",
+  "parse_success": true
+}

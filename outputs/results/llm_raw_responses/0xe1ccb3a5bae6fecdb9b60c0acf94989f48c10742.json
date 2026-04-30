@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xe1ccb3a5bae6fecdb9b60c0acf94989f48c10742",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"questionSender has control over responseHash and question\", \"only questionSender can stop the game and withdraw funds\"],\n  \"suspicious_patterns\": [\"state variable questionSender declared after functions\", \"owner-like variable questionSender has control over critical state\"],\n  \"explanation\": \"The contract has a hidden state deception mechanism, where the questionSender has control over the responseHash and question, and only they can stop the game and withdraw funds. This allows the deployer to silently manipulate the game state and prevent non-owners from withdrawing funds.\"\n}",
+  "parse_success": true
+}

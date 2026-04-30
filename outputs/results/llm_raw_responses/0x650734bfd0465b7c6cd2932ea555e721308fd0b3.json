@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x650734bfd0465b7c6cd2932ea555e721308fd0b3",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"secretSeed can be reseeded by the owner, making it impossible for non-owners to win\", \"forceReseed function allows the owner to manipulate the secretSeed\"],\n  \"suspicious_patterns\": [\"hardcoded external address is not present, but the owner can manipulate the secretSeed\", \"state variables declared before functions\"],\n  \"explanation\": \"The contract appears to be a lottery where participants can win the jackpot if their lucky number matches the winner's lucky number. However, the owner can reseed the secret seed at any time, making it impossible for non-owners to win. The forceReseed function allows the owner to manipulate the secret seed, further reducing the chances of non-owners winning. This indicates a hidden state deception, where the owner has control over the contract's state, making it a honeypot.\"\n}",
+  "parse_success": true
+}

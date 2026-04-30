@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x741f1923974464efd0aa70e77800ba5d9ed18902",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The owner can reseed the contract at will, changing the secret seed and making it impossible for a non-owner to win\", \"The contract's balance can be silently inflated by the owner, making it impossible for a non-owner to win\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"owner can reseed the contract at will\", \"hardcoded external address not present but owner has significant control\"],\n  \"explanation\": \"The contract appears to be a legitimate lottery, but the owner has significant control over the secret seed and can reseed the contract at will, making it impossible for a non-owner to win. The contract's balance can also be silently inflated by the owner, further reducing the chances of a non-owner winning.\"\n}",
+  "parse_success": true
+}

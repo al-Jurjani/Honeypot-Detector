@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x0fc2a55d5bd13033f1ee0cdd11f60f7efe66f467",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract is a standard implementation of a Transparent Upgradeable Proxy from OpenZeppelin, with no apparent honeypot deception mechanisms. It follows best practices and does not contain any suspicious patterns or hidden conditions that would prevent a non-owner from withdrawing funds.\"\n}",
+  "parse_success": true
+}

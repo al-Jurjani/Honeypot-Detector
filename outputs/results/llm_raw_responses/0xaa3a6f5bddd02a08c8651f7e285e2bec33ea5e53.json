@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xaa3a6f5bddd02a08c8651f7e285e2bec33ea5e53",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract can be closed by the receiver, preventing further deposits and withdrawals\", \"The sender can only set the unlock time, but not withdraw funds\"],\n  \"suspicious_patterns\": [\"state variable 'closed' can be set to true by the receiver, trapping funds\", \"fallback function allows the contract to receive funds without any logic\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the 'hidden_state' deception type, where the 'closed' state variable can be set to true by the receiver, preventing further deposits and withdrawals. The contract's logic is also suspicious, as the sender can only set the unlock time, but not withdraw funds, and the fallback function allows the contract to receive funds without any logic.\"\n}",
+  "parse_success": true
+}

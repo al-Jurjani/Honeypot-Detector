@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x086f405146ce90135750bbec9a063a8b20a8bffb",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code is a standard ERC20 token implementation with OpenZeppelin's Ownable2Step access control, and does not exhibit any characteristics of a honeypot contract. The contract's logic is transparent and follows typical token management patterns.\"\n}",
+  "parse_success": true
+}

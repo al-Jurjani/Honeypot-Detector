@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xa91a453abde404a303fb118c46e00c8f630216a9",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"msg.value must exceed Limit, which can be silently inflated by the owner\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"state variable Limit can be updated by owner\"],\n  \"explanation\": \"The contract has a high deception risk due to the balance disorder honeypot type, where the owner can silently inflate the Limit, making it impossible for non-owners to withdraw funds. The addOwner function requires msg.value to exceed Limit, which can be updated by the owner, effectively trapping victim funds.\"\n}",
+  "parse_success": true
+}

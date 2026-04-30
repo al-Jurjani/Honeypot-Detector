@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x39fbbabf11738317a448031930706cd3e612e1b9",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"delegatecall to external contract\", \"external contract can revert or manipulate call\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"delegatecall to external contract\"],\n  \"explanation\": \"The contract delegates all logic to an external contract at a hardcoded address, which can be controlled by the deployer to silently revert or manipulate the victim's withdrawal. This allows the deployer to trap victim funds, making it a straw man honeypot.\"\n}",
+  "parse_success": true
+}

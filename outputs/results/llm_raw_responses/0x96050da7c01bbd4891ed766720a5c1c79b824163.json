@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x96050da7c01bbd4891ed766720a5c1c79b824163",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"inheritance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The 'Owner' variable is re-declared in the child contract, shadowing the parent's 'Owner' variable\", \"The 'onlyOwner' modifier checks the parent's 'Owner' variable, not the child's\"],\n  \"suspicious_patterns\": [\"State variable 'Owner' declared after functions\", \"Shadowing of parent contract's 'Owner' variable\"],\n  \"explanation\": \"The contract is a honeypot due to the 'inheritance_disorder' deception type, where the child contract's 'Owner' variable shadows the parent's 'Owner' variable, preventing non-owners from withdrawing funds. The 'onlyOwner' modifier checks the parent's 'Owner' variable, which is not the same as the child's 'Owner' variable, effectively locking out non-owners. This allows the deployer to drain all deposited Ether.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x81edefc64aabdce71f68347774bd4673d1d31419",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"inheritance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract has two 'owner' variables, one in the Owned contract and one in the LockedCash contract, which can cause confusion and allow the deployer to exploit the contract\"],\n  \"suspicious_patterns\": [\"state variable 'owner' declared in both parent and child contracts\", \"use of Solidity version 0.4.18 which has known security vulnerabilities\"],\n  \"explanation\": \"The contract is a honeypot due to the 'inheritance_disorder' deception type, where the child contract 'LockedCash' re-declares the 'owner' variable, causing a mismatch between the 'owner' variable in the parent contract 'Owned' and the child contract. This allows the deployer to exploit the contract and prevent non-owners from withdrawing funds.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x4ba0d338a7c41cc12778e0a2fa6df2361e8d8465",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"inheritance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"Owner variable is re-declared in the child contract, shadowing the parent's Owner variable\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"re-declaration of Owner variable in child contract\"],\n  \"explanation\": \"The contract is a honeypot due to the inheritance disorder deception type, where the child contract re-declares the Owner variable, shadowing the parent's Owner variable. This creates a mismatch where the isOwner modifier checks the parent's Owner, but the child contract's Owner is updated, preventing non-owners from withdrawing funds. The contract's design allows the deployer to exploit this mismatch and trap victim funds.\"\n}",
+  "parse_success": true
+}

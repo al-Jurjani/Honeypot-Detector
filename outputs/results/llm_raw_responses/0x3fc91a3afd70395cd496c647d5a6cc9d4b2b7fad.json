@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3fc91a3afd70395cd496c647d5a6cc9d4b2b7fad",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external addresses in imported modules\", \"complex command decoding and execution logic\"],\n  \"explanation\": \"The contract appears to be a legitimate implementation of a universal router for executing various commands, with a focus on swapping and transferring assets. While the contract has complex logic and imports external modules, there are no obvious indicators of honeypot deception. The contract's functionality and code structure suggest a genuine attempt to provide a useful service, rather than a malicious intent to trap user funds.\"\n}",
+  "parse_success": true
+}

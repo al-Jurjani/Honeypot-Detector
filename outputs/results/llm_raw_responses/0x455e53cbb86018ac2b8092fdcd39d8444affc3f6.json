@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x455e53cbb86018ac2b8092fdcd39d8444affc3f6",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The contract is a standard ERC20 token implementation with additional features for minting and access control. It does not contain any hidden traps or deceptive mechanisms that would prevent users from withdrawing funds. The contract's logic is transparent and follows standard security practices.\"\n}",
+  "parse_success": true
+}

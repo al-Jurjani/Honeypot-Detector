@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x0000000000085d4780b73119b644ae5ecd22b376",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"assembly code\"],\n  \"explanation\": \"The contract is an upgradeability proxy with basic authorization control functionalities, and it does not contain any obvious honeypot deception mechanisms. The contract's logic is transparent, and the owner's control is well-defined. However, the use of assembly code and hardcoded external addresses may pose some risks, but they do not appear to be malicious in this context.\"\n}",
+  "parse_success": true
+}

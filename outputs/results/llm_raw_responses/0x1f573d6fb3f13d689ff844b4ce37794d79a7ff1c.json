@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded owner-only access control\"],\n  \"explanation\": \"The contract appears to be a legitimate implementation of an ERC20 token with additional features for ownership and token management. The owner-only access control and transfer restrictions are explicitly stated in the contract, and there are no apparent hidden conditions or deceptive mechanisms that would prevent non-owners from withdrawing funds.\"\n}",
+  "parse_success": true
+}

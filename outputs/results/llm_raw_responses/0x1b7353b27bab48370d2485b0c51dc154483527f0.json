@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1b7353b27bab48370d2485b0c51dc154483527f0",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\n    \"The contract has a complex tax system with buy and sell taxes that can be adjusted by the owner\",\n    \"The contract has a swap mechanism that can be triggered by the owner to swap tokens for ETH\",\n    \"The contract has a limit on the maximum transaction amount and wallet size that can be adjusted by the owner\"\n  ],\n  \"suspicious_patterns\": [\n    \"Hardcoded external address for UniswapV2Router\",\n    \"Complex logic for calculating taxes and swapping tokens\",\n    \"Owner-only withdrawal function\"\n  ],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token with a complex tax system and swap mechanism. While it has some suspicious patterns, such as hardcoded external addresses and complex logic, it does not appear to be a honeypot contract. However, the contract's complexity and owner-only withdrawal function do pose some risks for users.\"\n}",
+  "parse_success": true
+}

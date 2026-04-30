@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xb31820c1d84e183377030b6d3f0e1ee5c1cff643",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"owner can only withdraw\", \"openDate must be reached\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"fallback function is payable but does nothing\"],\n  \"explanation\": \"The contract has a hidden condition where only the owner can withdraw funds, and the openDate must be reached. The fallback function is payable but does nothing, which could be used to trap funds. The state variable Owner is declared after the functions, which could be used to manipulate the contract's state.\"\n}",
+  "parse_success": true
+}

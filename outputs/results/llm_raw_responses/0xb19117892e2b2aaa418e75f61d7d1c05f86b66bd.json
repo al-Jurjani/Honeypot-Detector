@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xb19117892e2b2aaa418e75f61d7d1c05f86b66bd",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"responseHash must match keccak256 of correct response\", \"msg.value must be greater than 1 ether\"],\n  \"suspicious_patterns\": [\"use of Solidity version 0.4.19, which is outdated\", \"use of a fallback function without any functionality\"],\n  \"explanation\": \"The contract appears to be a simple quiz game where players can submit answers and win the contract's balance if their answer is correct. The contract does not exhibit any obvious honeypot characteristics, but its simplicity and lack of access control make it vulnerable to exploitation. The use of an outdated Solidity version and a fallback function without any functionality are suspicious patterns, but they do not necessarily indicate a honeypot.\"\n}",
+  "parse_success": true
+}

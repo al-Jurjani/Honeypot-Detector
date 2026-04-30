@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3c3f481950fa627bb9f39a04bccdc88f4130795b",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"locked variable can be set by owner to prevent withdrawals\", \"gameOwner can only release funds\"],\n  \"suspicious_patterns\": [\"state variable gameOwner can be updated by owner\", \"owner-only functions for locking, unlocking, and releasing funds\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variable 'locked' and the 'gameOwner' variable, which can be updated by the owner to prevent non-owners from withdrawing funds. The 'releaseFunds' function also allows the owner to drain the contract's funds.\"\n}",
+  "parse_success": true
+}

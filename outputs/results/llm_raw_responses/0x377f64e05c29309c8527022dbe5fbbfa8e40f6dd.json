@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x377f64e05c29309c8527022dbe5fbbfa8e40f6dd",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract can be closed by the sender, preventing further withdrawals\", \"The sender can set the unlock time, potentially trapping funds\"],\n  \"suspicious_patterns\": [\"state variable declared before functions\", \"sender can control the contract state\"],\n  \"explanation\": \"The contract has a hidden state that can be controlled by the sender, allowing them to trap funds and prevent non-owners from withdrawing. The sender can close the contract and set the unlock time, giving them significant control over the contract's state.\"\n}",
+  "parse_success": true
+}

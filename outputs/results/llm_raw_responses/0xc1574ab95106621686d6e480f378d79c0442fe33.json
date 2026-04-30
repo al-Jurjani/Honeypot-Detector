@@ -1,5 +1,5 @@
 {
   "contract_id": "0xc1574ab95106621686d6e480f378d79c0442fe33",
-  "raw_response": "API_ERROR: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knhg10j2f42a16mp4fcm7dgz` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99069, Requested 1807. Please try again in 12m36.864s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-  "parse_success": false
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"responseHash can be updated by the questionSender at any time, preventing non-owners from winning\", \"questionSender has full control over the game state\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"questionSender has privileged access to update game state\"],\n  \"explanation\": \"The contract allows the questionSender to update the responseHash and question at any time, effectively giving them control over the game state and preventing non-owners from winning. This hidden state variable manipulation makes it a honeypot contract.\"\n}",
+  "parse_success": true
 }

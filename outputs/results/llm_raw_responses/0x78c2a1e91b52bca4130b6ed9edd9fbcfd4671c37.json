@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x78c2a1e91b52bca4130b6ed9edd9fbcfd4671c37",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"redeem function transfers all balance to owner before transferring to msg.sender, effectively trapping funds\", \"withdraw function only accessible by owner\"],\n  \"suspicious_patterns\": [\"hardcoded external address in withdraw function\", \"state variable Owner can be updated by owner in withdraw function\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variable Owner, which can be updated by the owner in the withdraw function, and the redeem function, which transfers all balance to the owner before attempting to transfer to the msg.sender, effectively trapping funds. The contract's design allows the owner to drain all deposited Ether while preventing victims from successfully withdrawing funds.\"\n}",
+  "parse_success": true
+}

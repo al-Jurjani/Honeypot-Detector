@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x4481eb9a39104df862f7cae3e39db63ed1abf06b",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\n    \"hardcoded external address\",\n    \"complex fee structures\"\n  ],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token with a complex fee structure and automated market maker pair management. While it has some suspicious patterns, such as hardcoded external addresses, it does not exhibit any clear honeypot deception mechanisms. The contract's functionality and intent seem to be focused on managing token transactions, fees, and social links, rather than trapping user funds.\"\n}",
+  "parse_success": true
+}

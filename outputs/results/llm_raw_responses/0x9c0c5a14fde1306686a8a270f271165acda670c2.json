@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x9c0c5a14fde1306686a8a270f271165acda670c2",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"onlyOwner modifier restricts withdrawal to contract owner\", \"no visible mechanism for non-owners to withdraw funds\"],\n  \"suspicious_patterns\": [\"onlyOwner modifier\", \"state variables declared after functions\", \"lack of visible withdrawal mechanism for non-owners\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the lack of a visible mechanism for non-owners to withdraw funds, and the onlyOwner modifier restricts withdrawal to the contract owner. The contract's design suggests that the owner can silently drain all deposited Ether, making it a potential honeypot.\"\n}",
+  "parse_success": true
+}

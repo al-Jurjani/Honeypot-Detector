@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x07ec6c3159c2336ba36ab41f73411f8fee430470",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"mintingFinished must be true and goalReached must be false for refund\", \"votingPrepareLong and votingPrepareInProgress modifiers can prevent certain functions from being called\"],\n  \"suspicious_patterns\": [\"hardcoded external address in donateAuthor function\", \"complex voting mechanism with multiple modifiers and state variables\"],\n  \"explanation\": \"The contract appears to be a legitimate token sale contract with a complex voting mechanism, but it has some suspicious patterns such as a hardcoded external address and a complex voting mechanism that could potentially be used to trap funds. However, the contract does not exhibit any of the typical honeypot characteristics, and the withdrawal function seems to be accessible to non-owners under certain conditions.\"\n}",
+  "parse_success": true
+}

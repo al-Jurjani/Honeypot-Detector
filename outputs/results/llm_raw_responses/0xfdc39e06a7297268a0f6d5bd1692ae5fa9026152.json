@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xfdc39e06a7297268a0f6d5bd1692ae5fa9026152",
+  "raw_response": "{\n  \"deception_risk_score\": 9,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"onlyOwner modifier is incorrectly implemented, allowing only non-owners to call the function\", \"withdraw function transfers funds to the owner instead of the caller\"],\n  \"suspicious_patterns\": [\"state variable declared before functions\", \"onlyOwner modifier is incorrectly implemented\", \"hardcoded transfer to owner in withdraw function\"],\n  \"explanation\": \"The contract has a flawed onlyOwner modifier that allows non-owners to call the withdraw function, but the function itself transfers funds to the owner instead of the caller. This indicates a hidden state deception, making it a honeypot contract.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xd022969da8a1ace11e2974b3e7ee476c3f9f99c6",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded owner assignment\", \"use of throw statement\", \"old solidity version\"],\n  \"explanation\": \"The contract appears to be a legitimate presale fund contract, allowing investors to invest and divest ether. The owner can withdraw the contract's balance, but non-owners can also divest their invested amounts. The contract uses an old solidity version and has some suspicious patterns, but it does not exhibit any of the known honeypot deception types.\"\n}",
+  "parse_success": true
+}

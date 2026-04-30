@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x13507a31087a447e5c6373156e9911d68741d06f",
+  "raw_response": "```json\n{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\n    \"hardcoded external address is not present\",\n    \"state variables declared before functions\"\n  ],\n  \"explanation\": \"The contract appears to be a standard ERC20 token implementation with an additional access control mechanism through the Ownable contract. There are no obvious honeypot patterns or hidden conditions that would prevent a non-owner from withdrawing funds. However, the presence of the onlyDelegates modifier and the approveSwap function could potentially be used to restrict access to certain functions, but this does not necessarily indicate a honeypot.\"\n}\n```",
+  "parse_success": true
+}

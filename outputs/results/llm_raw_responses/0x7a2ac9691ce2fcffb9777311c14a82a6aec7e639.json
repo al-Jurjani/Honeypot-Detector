@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x7a2ac9691ce2fcffb9777311c14a82a6aec7e639",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded timestamp\", \"owner-only functions\"],\n  \"explanation\": \"The contract appears to be a legitimate ERC20 token contract with additional functionality for buying and selling tokens. The contract has a clear and transparent structure, and the functions are well-documented. The only potential issues are the hardcoded timestamp and the owner-only functions, but these do not seem to be malicious.\"\n}",
+  "parse_success": true
+}

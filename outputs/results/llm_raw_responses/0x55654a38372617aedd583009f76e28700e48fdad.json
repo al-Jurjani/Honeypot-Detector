@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x55654a38372617aedd583009f76e28700e48fdad",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"key is based on block.timestamp, making it unpredictable and practically unguessable\", \"Owner can update key by redeploying contract or manipulating block.timestamp\"],\n  \"suspicious_patterns\": [\"state variable key is based on block.timestamp\", \"only Owner can withdraw funds\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the unpredictable nature of the key, which is based on block.timestamp, making it practically unguessable. The Owner has control over the key and can update it, preventing non-owners from withdrawing funds. The contract's design allows the Owner to drain the contract's balance, while non-owners are left with no way to withdraw their funds.\"\n}",
+  "parse_success": true
+}

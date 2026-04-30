@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x0f904dbaff4b775b019e33618e5867d3a92adc68",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"onlyDelegates modifier\"],\n  \"explanation\": \"The contract appears to be a standard ERC20 implementation with some additional functionality. While there are some suspicious patterns, such as the use of a hardcoded external address and an onlyDelegates modifier, they do not seem to be part of a honeypot deception mechanism. The contract's logic is mostly straightforward and follows common ERC20 implementation practices.\"\n}",
+  "parse_success": true
+}

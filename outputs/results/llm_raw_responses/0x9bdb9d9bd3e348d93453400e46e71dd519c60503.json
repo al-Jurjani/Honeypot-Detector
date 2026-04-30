@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x9bdb9d9bd3e348d93453400e46e71dd519c60503",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"passHasBeenSet flag can be set by the sender, preventing others from withdrawing\", \"sender can revoke the contract balance at any time\"],\n  \"suspicious_patterns\": [\"state variable declared before functions\", \"sender can control passHasBeenSet flag\", \"Revoce function allows sender to drain contract balance\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variable passHasBeenSet, which can be set by the sender, and the Revoce function, which allows the sender to drain the contract balance. The contract's logic is designed to prevent non-owners from withdrawing funds, making it a potential honeypot.\"\n}",
+  "parse_success": true
+}

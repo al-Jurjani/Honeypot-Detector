@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x41af309c5cd65cc8ed37aab1a493d3fd2e473c5c",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a standard implementation of the ERC20 token interface, with no obvious signs of honeypot deception or malicious intent. The code is well-structured and follows common Solidity best practices.\"\n}",
+  "parse_success": true
+}

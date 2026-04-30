@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x2cc8e271f11934f5fa15942dfda2b59432c2e0f3",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract can be closed by the sender, preventing further deposits\", \"The sender can set the unlock time, potentially trapping funds\"],\n  \"suspicious_patterns\": [\"state variable declared before functions\", \"sender can control the unlock time\", \"fallback function allows additional ether to be sent to the contract\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variables and the ability of the sender to control the unlock time and close the contract, potentially trapping funds. The contract's design allows the sender to manipulate the state variables and prevent non-owners from withdrawing funds.\"\n}",
+  "parse_success": true
+}

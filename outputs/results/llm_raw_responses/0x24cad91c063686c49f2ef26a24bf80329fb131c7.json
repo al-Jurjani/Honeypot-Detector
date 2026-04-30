@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x24cad91c063686c49f2ef26a24bf80329fb131c7",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"hashPass must match the set hash\", \"now must be greater than giftTime\", \"reciver must be set to the sender's address\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"hardcoded conditions for withdrawal\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variables and conditions that prevent non-owners from withdrawing funds. The hashPass and reciver variables can be set by the sender, allowing them to control the withdrawal conditions and trap victim funds.\"\n}",
+  "parse_success": true
+}

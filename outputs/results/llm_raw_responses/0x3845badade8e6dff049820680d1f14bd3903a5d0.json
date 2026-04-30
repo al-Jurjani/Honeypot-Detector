@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x3845badade8e6dff049820680d1f14bd3903a5d0",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded external address is not present\", \"no var loop counter\", \"state variables declared before functions\"],\n  \"explanation\": \"The contract appears to be a standard ERC20 token implementation with additional features such as super operators and approval mechanisms. There are no obvious honeypot deception types present, and the contract's logic seems to follow standard token management practices. The contract's code is well-structured, and state variables are declared before functions, reducing the risk of hidden state variables.\"\n}",
+  "parse_success": true
+}

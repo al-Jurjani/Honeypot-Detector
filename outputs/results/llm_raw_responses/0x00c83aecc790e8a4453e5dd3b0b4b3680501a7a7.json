@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x00c83aecc790e8a4453e5dd3b0b4b3680501a7a7",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract is a library for date and time calculations and does not contain any logic for managing or transferring Ether, making it unlikely to be a honeypot. The contract's functions are purely computational and do not interact with the blockchain's state in a way that could be used to trap funds.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xaded0438139b495db87d3f70f0991336df97136f",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract's state variable 'closed' is not visible to casual readers and can be manipulated by the deployer\", \"The 'sender' variable can be updated by the deployer to lock out victims\"],\n  \"suspicious_patterns\": [\"state variable 'closed' declared after functions\", \"function 'SetPass' allows deployer to update 'hashPass' and 'sender' variables\"],\n  \"explanation\": \"The contract appears to be a honeypot due to the hidden state variable 'closed' and the ability of the deployer to update critical state variables, making it difficult for victims to withdraw funds. The 'SetPass' function allows the deployer to update the 'hashPass' and 'sender' variables, giving them control over the contract's state.\"\n}",
+  "parse_success": true
+}

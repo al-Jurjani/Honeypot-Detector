@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xa379eda47d90fb4bc2dfa54556421ff0f198ca47",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"responseHash must match keccak256(_response)\", \"msg.value must be greater than 1 ether\"],\n  \"suspicious_patterns\": [\"use of tx.origin\", \"use of Solidity version 0.4.20\", \"payable fallback function\"],\n  \"explanation\": \"The contract appears to be a simple guessing game where players can submit answers and win the contract's balance if their answer matches the expected hash. While there are some suspicious patterns, such as the use of tx.origin and an outdated Solidity version, the contract does not exhibit any of the typical honeypot deception mechanisms.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1111111254eeb25477b68fb85ed929f73a960582",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code does not exhibit any characteristics of a honeypot contract, such as hidden state variables, obfuscated code, or deceptive logic. It appears to be a legitimate implementation of a Clipper exchange interface and related utilities.\"\n}",
+  "parse_success": true
+}

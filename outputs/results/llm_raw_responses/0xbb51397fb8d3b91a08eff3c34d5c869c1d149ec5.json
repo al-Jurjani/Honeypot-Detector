@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xbb51397fb8d3b91a08eff3c34d5c869c1d149ec5",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"responseHash must match keccak256(_response)\", \"msg.value must be greater than 1 ether\"],\n  \"suspicious_patterns\": [\"hardcoded condition in Play function\", \"use of tx.origin\"],\n  \"explanation\": \"The contract appears to be a simple game where players can guess a word and win the contract's balance if they guess correctly and send more than 1 ether. The contract does not exhibit any obvious honeypot characteristics, but it does have some suspicious patterns and hidden conditions that could potentially be exploited.\"\n}",
+  "parse_success": true
+}

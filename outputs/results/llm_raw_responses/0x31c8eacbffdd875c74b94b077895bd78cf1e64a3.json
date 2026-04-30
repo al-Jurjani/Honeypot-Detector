@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x31c8eacbffdd875c74b94b077895bd78cf1e64a3",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a standard implementation of an EIP-20 token, with no obvious signs of honeypot deception. The contract's logic and functionality seem to follow typical token contract behavior, and there are no apparent hidden conditions or suspicious patterns that would indicate a honeypot.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xbabfe0ae175b847543724c386700065137d30e3b",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The Log contract can be controlled by the deployer to revert or manipulate the withdrawal\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"use of older Solidity version\"],\n  \"explanation\": \"The contract uses an external Log contract at a hardcoded address, which can be controlled by the deployer to revert or manipulate the withdrawal, making it a straw man honeypot. The use of an older Solidity version also raises suspicions. The CashOut function appears to allow withdrawals, but the Log contract can interfere with this process.\"\n}",
+  "parse_success": true
+}

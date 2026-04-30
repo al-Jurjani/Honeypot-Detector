@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xb93430ce38ac4a6bb47fb1fc085ea669353fd89e",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honepot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The Log contract can be controlled by the deployer to revert or manipulate the withdrawal\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"external contract call\"],\n  \"explanation\": \"The contract uses an external Log contract at a hardcoded address, which can be controlled by the deployer to manipulate the withdrawal. The CashOut function also uses the transfer function with a call to the sender, which can be exploited by the deployer to drain the funds.\"\n}",
+  "parse_success": true
+}

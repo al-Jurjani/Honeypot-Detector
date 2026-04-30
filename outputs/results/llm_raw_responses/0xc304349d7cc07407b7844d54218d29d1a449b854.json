@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xc304349d7cc07407b7844d54218d29d1a449b854",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The sender can only be set once, and only the sender can update the unlock time\", \"The contract can be closed by the sender, preventing anyone from withdrawing funds\"],\n  \"suspicious_patterns\": [\"state variable declared before functions\", \"sender can update unlock time\", \"contract can be closed by sender\"],\n  \"explanation\": \"The contract appears to be a honeypot due to its hidden state variables and the ability of the sender to control the contract's state, making it difficult for non-owners to withdraw funds. The sender can update the unlock time and close the contract, effectively trapping funds. The contract's design suggests that it is intended to deceive users into sending Ether, which can then be drained by the sender.\"\n}",
+  "parse_success": true
+}

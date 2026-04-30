@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xa0174f796d3b901adaa16cfbb589330462be0329",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"investors[msg.sender].investment must be greater than 0\", \"amount must be less than or equal to investors[msg.sender].investment\", \"owner can silently update state variables to lock out victims\"],\n  \"suspicious_patterns\": [\"state variables declared after functions\", \"owner-only fallback function\", \"use of throw statement\"],\n  \"explanation\": \"The contract has a high deception risk score due to its complex logic and hidden state variables, which can be manipulated by the owner to lock out victims. The contract's use of a protected modifier and an owner-only fallback function also raises suspicions. While the contract appears to allow non-owners to invest and divest, the owner's ability to update state variables and control the dividend distribution creates a hidden trap that prevents victims from successfully withdrawing their funds.\"\n}",
+  "parse_success": true
+}

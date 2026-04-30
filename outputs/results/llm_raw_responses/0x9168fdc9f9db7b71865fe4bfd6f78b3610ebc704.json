@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x9168fdc9f9db7b71865fe4bfd6f78b3610ebc704",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"onlyOwner modifier restricts withdrawal\", \"minimum deposit requirement\"],\n  \"suspicious_patterns\": [\"onlyOwner modifier\", \"revert() in deposit function\", \"selfdestruct in kill function\"],\n  \"explanation\": \"The contract has a high deception risk score due to the onlyOwner modifier restricting withdrawal, and the minimum deposit requirement. The contract's design allows the owner to drain all deposited Ether, making it a potential honeypot. The kill function also allows the owner to self-destruct the contract, taking all funds with it.\"\n}",
+  "parse_success": true
+}

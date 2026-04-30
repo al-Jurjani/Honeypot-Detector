@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x34bc4f174c027a68f94a7ea6a3b4930e0211b19d",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"The contract can be locked by the owner by calling PassHasBeenSet, preventing others from withdrawing\", \"The owner can change the unlock time using SetGiftTime, controlling when others can withdraw\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"owner can control contract state and prevent withdrawals\"],\n  \"explanation\": \"The contract appears to be a honeypot due to its hidden state variables and the owner's ability to control the contract's state, preventing non-owners from withdrawing funds. The owner can lock the contract and change the unlock time, making it difficult for others to withdraw the funds.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1767856bc75cf070de5e6ba3d0c718440f008c66",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"balance_disorder\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"onlyOwner modifier restricts withdrawal to owner only\", \"owner can prevent withdrawal by keeping contract balance non-zero\"],\n  \"suspicious_patterns\": [\"state variable Owner declared in both Ownable and TimeCapsuleEvent contracts\", \"onlyOwner modifier restricts critical functions\"],\n  \"explanation\": \"The contract has a high deception risk score due to the balance disorder honeypot type, where the owner can restrict withdrawal by keeping the contract balance non-zero. The onlyOwner modifier also restricts critical functions, making it difficult for non-owners to withdraw funds.\"\n}",
+  "parse_success": true
+}

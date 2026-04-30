@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x031de51f3e8016514bd0963d0b2ab825a591db9a",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code is a standard implementation of the ERC1967 proxy for the Universal Upgradeable Proxy Standard (UUPS) pattern, utilizing OpenZeppelin's contracts. It does not contain any known honeypot deception types or suspicious patterns that would indicate it is a honeypot contract.\"\n}",
+  "parse_success": true
+}

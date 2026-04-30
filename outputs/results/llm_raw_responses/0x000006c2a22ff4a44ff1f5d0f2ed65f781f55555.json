@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x000006c2a22ff4a44ff1f5d0f2ed65f781f55555",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code is a standard OpenZeppelin ERC1967Proxy implementation, which is a widely used and trusted proxy contract. There are no suspicious patterns or hidden conditions that would indicate a honeypot. The contract's functionality is transparent and well-documented, and it does not contain any deceptive or malicious code.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+  "raw_response": "{\n  \"deception_risk_score\": 2,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The contract appears to be a legitimate implementation of the Uniswap token, with no obvious signs of honeypot deception. The code is well-structured and follows standard Solidity practices, with no suspicious patterns or hidden conditions that would prevent a non-owner from withdrawing funds.\"\n}",
+  "parse_success": true
+}

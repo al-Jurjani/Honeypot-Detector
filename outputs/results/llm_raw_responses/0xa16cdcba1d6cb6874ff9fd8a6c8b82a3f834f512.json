@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xa16cdcba1d6cb6874ff9fd8a6c8b82a3f834f512",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"hidden_state\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"onlyOwner modifier restricts withdrawal to contract owner\", \"state variable Owner is re-declared in child contract, potentially causing access-control issues\"],\n  \"suspicious_patterns\": [\"state variable declared after functions\", \"hardcoded owner assignment in Vault function\", \"onlyOwner modifier restricts critical functions\"],\n  \"explanation\": \"The contract has a high deception risk due to the re-declaration of the Owner state variable in the child contract, which may cause access-control issues. Additionally, the onlyOwner modifier restricts withdrawal functions to the contract owner, making it impossible for non-owners to withdraw funds. The contract's design suggests a honeypot deception mechanism, where the owner can drain deposited Ether while preventing victims from withdrawing.\"\n}",
+  "parse_success": true
+}

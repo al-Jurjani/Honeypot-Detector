@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x23f890c412f3f06784a30ba40ed4832a0fca55f0",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"the loglib contract can silently revert or manipulate the withdrawal\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"delegatecall to external contract\"],\n  \"explanation\": \"The contract uses a hardcoded external address for the loglib contract, which can be controlled by the deployer to silently revert or manipulate the withdrawal, trapping victim funds. The delegatecall to the loglib contract's logSendEvent function can also be used to drain the contract's balance.\"\n}",
+  "parse_success": true
+}

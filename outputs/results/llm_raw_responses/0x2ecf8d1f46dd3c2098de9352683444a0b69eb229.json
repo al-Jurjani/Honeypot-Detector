@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x2ecf8d1f46dd3c2098de9352683444a0b69eb229",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"type_deduction_overflow\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"infinite gas consumption due to uint8 overflow in loop counter\"],\n  \"suspicious_patterns\": [\"var loop counter\", \"inferred uint8 type\"],\n  \"explanation\": \"The contract contains a loop with a counter declared using 'var', which infers a uint8 type and can cause an overflow when the loop bound depends on msg.value, leading to infinite gas consumption and preventing non-owners from withdrawing funds. The contract's design allows the owner to withdraw funds, but the Test function's logic is flawed, making it a honeypot.\"\n}",
+  "parse_success": true
+}

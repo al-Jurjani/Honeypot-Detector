@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x2b98b39d39914b3aad05dd06a46868507156400d",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [\"response must match the hashed response\", \"game must not be closed\", \"msg.value must be greater than 0.5 ether\"],\n  \"suspicious_patterns\": [\"hardcoded conditions for withdrawal\", \"use of older Solidity version\"],\n  \"explanation\": \"The contract appears to be a legitimate quiz game where players can win Ether by answering questions correctly. The contract has some suspicious patterns, such as the use of an older Solidity version and hardcoded conditions for withdrawal, but it does not exhibit any of the typical honeypot deception types. The game can be started and stopped by the question sender, and players can withdraw their winnings if they answer the question correctly.\"\n}",
+  "parse_success": true
+}

@@ -1,0 +1,5 @@
+{
+  "contract_id": "0xfa8bb2a68c67e39409cd336d1a8024a2ad9a62ff",
+  "raw_response": "{\n  \"deception_risk_score\": 8,\n  \"is_honeypot\": true,\n  \"honeypot_type\": \"straw_man\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [\"delegatecall to hardcoded loglib address\", \"requirement for msg.value to meet or exceed Limit\"],\n  \"suspicious_patterns\": [\"hardcoded external address\", \"delegatecall to external contract\"],\n  \"explanation\": \"The contract uses a delegatecall to a hardcoded loglib address, which can be controlled by the deployer to silently revert or manipulate the victim's withdrawal. The requirement for msg.value to meet or exceed Limit also creates a potential trap for victims, as the deployer can adjust the Limit variable to prevent withdrawals.\"\n}",
+  "parse_success": true
+}

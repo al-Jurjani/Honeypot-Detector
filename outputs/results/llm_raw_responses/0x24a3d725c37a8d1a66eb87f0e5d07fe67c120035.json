@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x24a3d725c37a8d1a66eb87f0e5d07fe67c120035",
+  "raw_response": "{\n  \"deception_risk_score\": 0,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": false,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [],\n  \"explanation\": \"The provided contract source code appears to be a standard OpenZeppelin implementation of various proxy and beacon contracts, with no apparent honeypot deception mechanisms. The code is well-structured and follows standard Solidity best practices.\"\n}",
+  "parse_success": true
+}

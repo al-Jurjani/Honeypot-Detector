@@ -1,0 +1,5 @@
+{
+  "contract_id": "0x8685631276cfcf17a973d92f6dc11645e5158c0c",
+  "raw_response": "{\n  \"deception_risk_score\": 6,\n  \"is_honeypot\": false,\n  \"honeypot_type\": \"none\",\n  \"withdrawal_possible_for_non_owner\": true,\n  \"hidden_conditions\": [],\n  \"suspicious_patterns\": [\"hardcoded secret number\", \"unused shuffle function\", \"suicide function\"],\n  \"explanation\": \"The contract appears to be a simple game where players can guess a number and win the contract balance if they guess correctly. Although there are some suspicious patterns, such as the hardcoded secret number and the unused shuffle function, the contract does not seem to be a honeypot. The withdrawal is possible for non-owners, and there are no hidden conditions that prevent a victim from withdrawing funds.\"\n}",
+  "parse_success": true
+}
