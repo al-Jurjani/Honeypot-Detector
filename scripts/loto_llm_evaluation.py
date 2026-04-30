@@ -90,8 +90,13 @@ def run() -> None:
         df.loc[df["true_label"] == "honeypot", TYPE_COL].dropna().unique()
     )
     legitimate = df[df["true_label"] == "legitimate"]
-    log.info("Evaluating %d honeypot types, %d legitimate contracts",
-             len(honeypot_types), len(legitimate))
+    legit_train = legitimate.sample(frac=0.8, random_state=42)
+    legit_test = legitimate.drop(legit_train.index)
+
+    log.info(
+        "Evaluating %d honeypot types, %d train legit / %d test legit",
+        len(honeypot_types), len(legit_train), len(legit_test)
+    )
 
     records = []
 
@@ -102,15 +107,14 @@ def run() -> None:
             (df[TYPE_COL] != held_out_type)
         ]
 
-
         # Validation set (other types) — used only for threshold selection
-        val_df = pd.concat([other_hp, legitimate])
+        val_df = pd.concat([other_hp, legit_train])
         val_true = val_df["label_bin"].values
         val_scores = val_df["deception_risk_score"].values
         best_t = _best_threshold(val_true, val_scores)
 
-        # Test set (held-out type + legitimate)
-        test_df = pd.concat([held_out, legitimate])
+        # Test set (held-out type + held-out legitimate)
+        test_df = pd.concat([held_out, legit_test])
         y_true = test_df["label_bin"].values
         scores = test_df["deception_risk_score"].values
         bool_preds = test_df["is_honeypot_bin"].values

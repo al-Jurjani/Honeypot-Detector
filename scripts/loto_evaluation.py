@@ -102,11 +102,16 @@ def run() -> None:
         df[df["label"] == "honeypot"]["honeypot_type"].dropna().unique()
     )
     legitimate = df[df["label"] == "legitimate"]
+    legit_train = legitimate.sample(frac=0.8, random_state=RANDOM_STATE)
+    legit_test = legitimate.drop(legit_train.index)
 
     log.info(
         "Honeypot types found: %s", honeypot_types
     )
-    log.info("Legitimate contracts: %d", len(legitimate))
+    log.info(
+        "Legitimate contracts: %d train / %d test",
+        len(legit_train), len(legit_test)
+    )
 
     records = []
 
@@ -117,8 +122,8 @@ def run() -> None:
             (df["honeypot_type"] != held_out_type)
         ]
 
-        train_df = pd.concat([other_hp, legitimate])
-        test_df = pd.concat([held_out, legitimate])
+        train_df = pd.concat([other_hp, legit_train])
+        test_df = pd.concat([held_out, legit_test])
 
         X_train = train_df[FEATURE_COLS].astype(float).values
         y_train = train_df["label_bin"].values
@@ -131,7 +136,7 @@ def run() -> None:
             len(train_df),
             len(test_df),
             len(held_out),
-            len(legitimate),
+            len(legit_test),
         )
 
         for model_name, model in _make_models().items():
